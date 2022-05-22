@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!doctype html>
+    <html lang="en-US">
+
+      <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/homestyle.css">
+        <title>Главная</title>
+        <link href="css/singlePageTemplate.css" rel="stylesheet" type="text/css">
+        <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+      </head>
+
+  <body>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+      $(document).ready(function () {
+        document.getElementById("contentmega").style.display = "none";
+
+        function update(info) {
+          document.getElementById("balancetext").innerHTML = "Баланс: " + info[0] + " руб"
+          var already = info[3];
+          if (already !== null) {
+            window.location.replace("/php/room.php?get=" + info[3]);
+          }
+          var bet = info[2];
+          var game = info[1];
+          var historybackground = document.getElementById("historybackground");
+          if (game == 1) {
+            document.getElementById("bethistorytext").innerHTML = "ставка " + bet + " руб - выигрыш";
+            historybackground.className = "winhistorybackground"
+          } else {
+            document.getElementById("bethistorytext").innerHTML = "ставка " + bet + " руб - проигрыш";
+            historybackground.className = "losehistorybackground"
+          }
+        }
+        $.ajax({
+          type: 'POST',
+          url: '/php/updateprofile.php',
+          cache: false,
+          success: function (result) {
+            var info = new Array();
+            info = JSON.parse(result);
+            update(info);
+          },
+        });
+        $.ajax({
+          type: 'POST',
+          url: '/php/getroom.php',
+          cache: false,
+          success: function (result) {
+            var values = new Array();
+            values = JSON.parse(result);
+            aler(values);
+          },
+        });
+      });
+
+      function aler(values) {
+        var id = values[0];
+        var type = values[1];
+        var bet = values[2];
+        var limitation = values[3];
+        var users = values[4];
+        var win = values[5];
+        if (id.length == 0) {
+          document.getElementById("firsttext").style.display = "inline-table";
+          document.getElementById("firstbutton").style.display = "inline-table";
+        }
+        var myDiv = document.getElementById("parent");
+        var idtext = document.getElementById("idtext");
+        var typetext = document.getElementById("typetext");
+        var bettext = document.getElementById("bettext");
+        var spectatorbutton = document.getElementById("spectatorbutton");
+        var wintext = document.getElementById("wintext");
+        var limitationtext = document.getElementById("limitationtext");
+        var nullidroom = document.getElementById("nullidroom");
+        var parent = document.getElementById("parent");
+        var nullidroomtext = document.getElementById("nullidroomtext");
+        document.getElementById("allrooms").innerHTML = "всего комнат: " + id.length;
+        for (var i = 0; i < id.length; i++) { // выведет 0, затем 1, затем 2
+          var divClone = myDiv.cloneNode(true); // the true is for deep cloning
+          idtext.innerHTML = id[i];
+          nullidroom.id = id[i];
+          nullidroom.value = id[i];
+          parent.style.display = "inline-table";
+          wintext.innerHTML = win[i] + " руб";
+          spectatorbutton.value = id[i];
+          spectatorbutton.id = id[i];
+          if (users[i] >= limitation[i]) {
+            nullidroom.disabled = true;
+            nullidroomtext.innerHTML = "игра уже идет"
+            nullidroom.className = "joinroombuttonbusy";
+          } else {
+            nullidroomtext.innerHTML = "присоединиться"
+            nullidroom.className = "joinroombutton";
+            nullidroom.disabled = false;
+          }
+          if (type[i] == 1) {
+            typetext.innerHTML = "обычная";
+          } else {
+            typetext.innerHTML = "дуэльная";
+          }
+          bettext.innerHTML = bet[i] + " руб";
+          limitationtext.innerHTML = users[i] + "/" + limitation[i];
+          document.getElementById("list").append(divClone);
+        }
+      }
+
+    </script>
+    <!-- принимаю массив -->
+    <script type="text/javascript" src="/php/home.php"></script>
+    <script type="text/javascript" src="/php/room.php"></script>
+    <div class="leftpanel"></div>
+    <div class="row" id="contentlogo">
+      <div>
+        <div class="box">
+          <img src="/images/logo.png" class="logoimage"> </img>
+        </div>
+        <div class="box">
+          <fonts class="cheapwin">CheapWin<fonts>
+        </div>
+      </div>
+      <p>
+        <font class="nametitle">Ваш аккаунт:
+          <?= $_COOKIE['login'] ?></font>
+      </p>
+      <p>
+        <font class="nametitle">id:
+          <?= $_COOKIE['id'] ?></font>
+      </p>
+      <form action="/php/exit.php">
+        <button class="exitbutton" align="middle">
+          <div id="block">
+            <img src="/images/exiticon.png" id="icons"></img>
+            <fonts class="betroomdiscriptiontext">выйти</fonts>
+          </div>
+        </button>
+      </form>
+      <div class="balance">
+        <center>
+          <p class="balance__p">
+            <font class="balance__text" id="balancetext">Баланс: <?= $_COOKIE['balance'] ?> руб</font>
+          </p>
+          <form action="/html/getputmoney.html">
+            <button class="balance__button putmoney" id="opengetdialog">
+              <fonts class="betroomdiscriptiontext">пополнить</fonts>
+            </button>
+            <button class="balance__button getmoney" id="opengetdialog">
+              <fonts class="betroomdiscriptiontext">вывести</fonts>
+            </button>
+          </form>
+        </center>
+      </div>
+      <script>
+      </script>
+      <div class="mainbuttonbackground">
+        <button class="roomcreatebutton" onclick="show_popap('modal-1')">
+          <div class="backgroundiconmain"><img src="/images/createicon.png" id="mainicons"><img></div>
+          <font class="mainbuttontext">создать комнату</font>
+        </button>
+        <button class="roomsbutton" onclick="rooms()">
+          <div class="backgroundiconmain"><img src="/images/defultgame.png" id="mainicons"><img></div>
+          <font class="mainbuttontext">комнаты</font>
+        </button>
+        <button class="historybutton" onclick="megarooms()">
+          <div class="backgroundiconmain"><img src="/images/historyicon.png" id="mainiconsbig"><img></div>
+          <font class="mainbuttontext" align="center">история ставок</font>
+        </button>
+      </div>
+      <div class="nonehistorybackground" id="historybackground">
+        <center>
+          <p>
+            <font class="balance__text">последняя ставка</font>
+          </p>
+          <div class="bethistorytext">
+            <fonts id="bethistorytext">ставка 5 руб - выигрыш</fonts>
+          </div>
+        </center>
+      </div>
+      <div class="mainbuttonbackground">
+        <div class="title">Информация</div>
+        <div class="subtitle">Пользовательское соглашение</div>
+        <div class="subtitle">Политика конфиденциальности</div>
+        <div class="title">Поддержка</div>
+        <div class="subtitle">Доказуемая честность</div>
+        <div class="subtitle">Помощь</div>
+        <div class="title">Другое</div>
+        <div class="subtitle">Техническая поддержка</div>
+        <div class="subtitle">Наши контактные данные</div>
+        <div class="subtitle">Вопросы и ответы</div>
+      </div>
+      <div class="copyright">Copyright 2022-2022 Все права защищены</div>
+    </div>
+    </div>
+    <script>
+      function updateMessages(datamessages) {
+        var myDiv = document.getElementById("historyparent");
+        var data = datamessages[0];
+        var bet = datamessages[1];
+        var result = datamessages[2];
+        for (var i = 0; i < bet.length; i++) {
+          var divClone = myDiv.cloneNode(true); // the true is for deep cloning
+          myDiv.style.display = "flex"
+          var textresult;
+          var colortext;
+          if (result[i] == 0) {
+            textresult = "проигрыш";
+            colortext = "red";
+          } else {
+            textresult = "выигрыш";
+            colortext = "green";
+          }
+          $("#betfontleft").text("Дата ставки: " + data[i]);
+          $("#betfontcenter").text("Ставка: " + bet[i] + " руб");
+          $("#betfontright").text("результат: " + textresult).css("color", colortext);
+          document.getElementById("container2chat").appendChild(divClone);
+        }
+      }
+      $.ajax({
+        url: '/php/gethistory.php',
+        success: function (data) {
+          var datamessages = new Array();
+          datamessages = JSON.parse(data);
+          updateMessages(datamessages);
+        }
+      });
+
+    </script>
+    <div id="contentmega" class="betbackground">
+      <div class="upbar">
+        <div class="betroomdiscription" align="center" id="haha">
+          <font class="betroomdiscriptiontext">ваша история ставок</font>
+        </div>
+      </div>
+      <div id="container2chat">
+        <div id="historyparent" class="historyparent">
+          <fonts class="betfontleft" id="betfontleft">null</fonts>
+          <fonts class="betfontcenter" id="betfontcenter">null</fonts>
+          <fonts class="betfontright" id="betfontright">null</fonts>
+        </div>
+      </div>
+    </div>
+    <script>
+    </script>
+    <div id="content" class="betbackground">
+      <div class="upbar">
+        <div class="betroomdiscription" align="center" id="haha">
+          <font class="betroomdiscriptiontext">комнаты с игроками</font>
+        </div>
+        <div class="betroomdiscription" align="center">
+          <font class="betroomdiscriptiontext" id="allrooms">всего комнат: 0</font>
+        </div>
+        <div id="id">
+          <input style="font-weight: bold" id="inputSearch" class="mytext" type="search" name="login"
+            placeholder="поиск комнаты по id"> </input>
+          <button class="mytext" onclick="search()">
+            <font class="betroomdiscriptiontext">найти</font>
+          </button>
+        </div>
+      </div>
+      <div class="container1">
+        <center>
+          <font class="mainbuttontext" align="left" id="firsttext">Комнат нет. Будьте первыми, кто ее создаст.</font>
+          <button id="firstbutton" onclick="show_popap('modal-1', this)">создать</button>
+        </center>
+        <ul id="list">
+          <!-- отдельный элемент -->
+          <li class="parent" id="parent">
+            <div>
+              <div>
+                <div class="child">
+                  <font class="betfontblue">id: </font>
+                  <font class="betfont" align="left" id="idtext">null</font>
+                </div>
+                <div class="child">
+                  <font class="betfontblue">тип комнаты: </font>
+                  <font class="betfont" align="left" id="typetext">null</font>
+                </div>
+                <div class="child">
+                  <font class="betfontblue">ставка: </font>
+                  <font class="betfont" align="center" id="bettext">null</font>
+                </div>
+                <div class="child">
+                  <font class="betfontblue">выигрыш: </font>
+                  <font class="betfont" align="center" id="wintext">null</font>
+                </div>
+                <div class="child">
+                  <font class="betfontblue">участники: </font>
+                  <font class="betfont" align="center" id="limitationtext">null</font>
+                </div>
+                <div class="childnoborder">
+                  <button class="spectatorbutton" onclick="watchgame(this.id)" id="spectatorbutton"
+                    name="spectatorbutton" value="spectatorbutton">
+                    <font class="betfont" align="center">посмотреть</font>
+                  </button>
+                  <button class="joinroombutton" onclick="show_popap('modal-2',this.id)" id="nullidroom"
+                    name="nullidroom" value="nullidroom">
+                    <font class="betfont" id="nullidroomtext" align="center">присоединиться</font>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- отдельный элемент -->
+        </ul>
+      </div>
+    </div>
+    </div>
+    </div>
+    <script>
+      function search() {
+        let input = document.getElementById("inputSearch");
+        let filter = input.value.toUpperCase();
+        let ul = document.getElementById("list");
+        let li = ul.getElementsByTagName("li");
+        let isempty = false;
+        // Перебирайте все элементы списка и скрывайте те, которые не соответствуют поисковому запросу
+        for (let i = 0; i < li.length; i++) {
+          let a = li[i].getElementsByTagName("div")[0];
+          if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "inline-table";
+          } else {
+            li[i].style.display = "none";
+            isempty = true;
+          }
+        }
+        if (isempty) {
+          firsttext.style.display = "inline-table";
+          firsttext.innerHTML = "Комнат по данному id не найдено";
+          firstbutton.style.display = "none";
+        } else {
+          firsttext.style.display = "none";
+          firstbutton.style.display = "none";
+        }
+      }
+
+    </script>
+    <!-- Окно 1 -->
+    <div class="overlay" id="modal-1">
+      <div class="flex-popap">
+        <div class="popap">
+          <center>
+            <div class="head_popup">
+              создать комнату
+              <span class="close_popap">x</span>
+            </div>
+            <p>
+              <fonts class="historytext">выберите тип комнаты</fonts>
+            </p>
+            <form action="/php/createroom.php" name="form" id="theForm" method="post">
+              <p><input type="radio" name="oneMostCheck" id="oneMostCheck" value="1">
+                <fonts class="historytext">обычная комната</fonts>
+              </p>
+              <p><input type="radio" name="oneMostCheck" id="oneMostCheck" value="2">
+                <fonts class="historytext">дуэльная комната</fonts>
+              </p>
+              <p><input style="font-weight: bold" id="bet" class="mytextbet" type="text" name="bet"
+                  placeholder="сумма ставки"></p>
+              <p><input style="font-weight: bold" id="limitation" class="mytextbet" type="text" name="limitation"
+                  placeholder="кол-во людей"></p>
+              <p><button class="exitbutton" id="exitcreate" type="submit">
+                  <fonts class="exitfont">создать</fonts>
+                </button></p>
+            </form>
+          </center>
+        </div>
+      </div>
+    </div>
+    <!-- Окно 2 -->
+    <div class="overlay" id="modal-2">
+      <div class="flex-popap">
+        <div class="popap">
+          <div class="head_popup">
+            Войти в комнату?
+            <span class="close_popap">x</span>
+          </div>
+          <center>
+            <p>
+              <fonts class="betroomdiscriptiontext">За вход будут списаны деньги с баланса</fonts>
+            </p>
+            <form action="/php/joinroom.php" method="post">
+              <button id="yesjoin" value="yesjoin" name="yesjoin" class="exitbutton">
+                <fonts class="exitfont">войти</fonts>
+              </button>
+            </form>
+          </center>
+        </div>
+      </div>
+    </div>
+    <script>
+      function watchgame(id) {
+        window.location.replace('/php/room.php?id=' + id + "&you=spectator");
+      }
+
+      function show_popap(id_popap, obj) {
+        document.getElementById("yesjoin").value = obj;
+        var id = "#" + id_popap;
+        $(id).addClass('active');
+      }
+      // функция закрытия окна 
+      $(".close_popap").click(function () {
+        $(".overlay").removeClass("active");
+      });
+
+    </script>
+    <script src="/js/homescript.js"></script>
+  </body>
+
+</html>

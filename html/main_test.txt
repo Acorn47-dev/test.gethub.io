@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="adaptive__column-row">
+        <section class="leftpanel">
+            <div class="leftpanel__container container">
+                <div class="leftpanel__header header-logo">
+                    <div class="header__logo logo">
+                        <img src="/images/logo.png">
+                    </div>
+                    <div class="header__logo-text logo-text">
+                        CheapWin
+                    </div>
+                </div>
+    
+                <section class="user__block user">
+                    <div class="user__container user-container">
+                        <div class="user__text login-user">Login: Вася Пупкин</div>
+                        <div class="user__text id-user">id: 346346</div>
+                        <div class="user__exit-btn exit-btn">
+                            <div class="exit-btn__container btn-container">
+                                <div class="exit-btn__text">выйти</div>
+                                <img src="../images/exiticon.png" alt="exit-btn">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+                <section class="balance__block balance">
+                    <div class="block__container block-container">
+                        <div class="balance__text balance-text">БАЛАНС: 0 руб</div>
+                        <div class="balance__buttons">
+                            <button class="balance__btn btn-putmoney">
+                                <div class="balance__btn-icon">
+                                    <img src="../images/greenicon.png">
+                                </div>
+                                <div class="balance__btn-text">вывести</div>
+                            </button>
+                            <button class="balance__btn btn-getmoney">
+                                <div class="balance__btn-icon">
+                                    <img src="../images/redicon.png">
+                                </div>
+                                <div class="balance__btn-text">вывести</div>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                <div class="main__buttons main-buttons">
+                    <div class="main-buttons__container main-container">
+                        <button class="mainbutton mainbutton-create">
+                            <div class="mainbutton__background-icon background-icon">
+                                <img src="/images/createicon.png" class="icon-btn" alt="createicon">
+                            </div>
+                            <div class="mainbutton__background-text">Создать комнату</div>
+                        </button>
+                        <button class="mainbutton mainbutton-create">
+                            <div class="mainbutton__background-icon background-icon">
+                                <img src="/images/defultgame.png" alt="createicon">
+                            </div>
+                            <div class="mainbutton__background-text">Игровые комнаты</div>
+                        </button>
+                        <button class="mainbutton mainbutton-create">
+                            <div class="mainbutton__background-icon background-icon">
+                                <img src="/images/historyicon.png" alt="createicon">
+                            </div>
+                            <div class="mainbutton__background-text">Комната розыгрыша</div>
+                        </button>
+    
+                    </div>
+                </div>
+                <section class="last-bet bet-last">
+                    <div class="last-bet__container">
+                        <div class="last-bet__title">последняя ставка</div>
+                        <div class="last-bet__text-container">
+                            <div class="last-bet__icon">
+                                <img src="/images/loseicon.png" alt="loseicon">
+                            </div>
+                            <div class="last-bet__text">ставка 5 руб - проигрыш</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="rightpanel">
+            <section class="rightpanel__container rightpanel-container">
+                <div class="rightpanel__header rightpanel-header">
+                    <div class="rightpanel-header__texts header-texts">
+                        <div class="rightpanel-header__text">Комнаты с игроками</div>
+                        <div class="rightpanel-header__text">Всего комнат: 0</div>
+                    </div>
+                    <div class="rightpanel-header__search search">
+                        <input type="text" class="search__input" placeholder="поиск комнат по id">
+                        <button class="search__button">найти</button>
+                    </div>
+                </div>
+                <div class="rightpanel__body rightpanel-body">
+                    <div class="rightpanel-body__container body-container__hidden">
+                        <div class="body-container">
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+   
+</body>
+</html>

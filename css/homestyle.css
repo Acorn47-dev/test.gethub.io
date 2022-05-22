@@ -1,0 +1,1343 @@
+.balance { 
+  width: 19%;
+}
+
+.balance__text{
+  color: #F0F8FF;
+  font-family: Calibri;
+  font-weight: bold;
+  font-size: 1.4vw;
+}
+
+.balance__button {
+  background-color: #af2626;
+  border: none;
+  width: auto;
+  height: auto;
+  margin: auto;
+  background-color: #39373A;
+  transition: background-color 1s, transform 0.3s;
+  padding: 0.5vw;
+}
+
+.balance__button:hover {
+  background-color: #af2626;
+  border: none;
+  width: auto;
+  height: auto;
+  background-color: #262527;
+  padding: 0.5vw;
+}
+
+.getmoney{
+  background-image: url("../images/redicon.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 2vw;
+}
+.putmoney{
+  background-image: url("../images/greenicon.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 2vw;
+}
+.putmoney:hover{
+  background-image: url("../images/greenicon.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 2vw;
+}
+ 
+.logoimage{
+    width: 3vw;
+    height:3vw;
+    margin-top: 0.5vw;
+    margin-left: 0.5vw;
+}
+
+.bigpicture{
+margin: 0.2vw;
+height: 3.5vw;
+width: 3.5vw;
+}
+
+#id{
+  position: absolute;
+  top: 50%;
+ 
+  transform: translate(-1.5%,-50%);
+right: 0;
+}
+
+.upbar{
+  padding: 0;
+  margin: 0;
+  position:relative;
+  background: #3F3D41;
+  vertical-align: middle;
+}
+
+.roombackground {
+
+        width: 75%;
+        overflow: hidden;
+        min-height: 90%;
+        position: relative;
+        left: 0;
+      }
+      .usersbackground {
+  background: #313033;
+   background-color: #313033;
+  display: table-column;
+        width: 25%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+  right: 0;
+
+
+      }
+
+      .addsbackground {
+  background: #222843;
+   background-color: #222843;
+  height:max-content;
+  display: table-column;
+        width: 10vw;
+        height: 35vw;
+        position: absolute;
+  left: 0;
+  transform: translate(+10%,-50%);
+  top: 50%;
+        border-radius: 5px;
+      }
+      .randomborder {
+          width: auto;
+          height: auto;
+  border-style: solid;
+   border-color: #48444A;
+   display: inline-block;
+   margin: 0.1vw;
+        border-radius: 5px;
+      }
+
+      .userborder {
+          width: auto;
+          height: auto;
+          padding: 1vw;
+          margin-top: 0.5vw;
+          display: none;
+  border-style: solid;
+   border-color: #324AB2;
+        border-radius: 5px;
+      }
+
+      .backgroundmaininfo {
+          width: auto;
+          height: auto;
+          display: inline-block;
+          background: #4559B1;
+   background-color: #4559B1;
+   padding: 1vw;
+   margin-left: 0.5vw;
+   margin-bottom: 0.5vw;
+   margin-top: 1vw;
+        border-radius: 5px;
+      }
+
+
+      .exitbuttonroom {
+
+background-color: #af2626;
+border-radius: 5px;
+bottom: 0;
+left: 0;
+position: absolute;
+display: block;
+margin:10px;
+
+background: #7B68EE; /* Для старых браузров */
+background-color: #7B68EE;
+transition: background-color 0.3s, transform 0.3s;
+padding: 10px;
+border: none;
+}
+
+
+
+
+.maintext{
+font-family: Calibri;
+color: #F0F8FF;
+font-weight: bold;
+font-size: 1.5vw;
+}
+#waittextdiscribe{
+  font-family: Calibri;
+  color: #F0F8FF;
+  font-weight: bold;
+  font-size: 1vw;
+  }
+
+
+
+  
+#exitcreate{
+  display: flex;
+  float: bottom;
+}
+
+#createcontent {
+  display: inline-block;
+  position: relative;
+
+ }
+
+ .spectatorbutton{
+         
+
+  vertical-align: middle;
+    height: auto;
+  
+    position:relative;
+    right: 0;
+    background: #575757;
+    background-color: #575757;
+    transition: background-color 0.3s, transform 0.3s;
+    padding: 0.5vw;
+    border: none;
+  }
+
+.joinroombutton{
+         
+
+vertical-align: middle;
+  height: auto;
+
+  position:relative;
+  right: 0;
+  background: #019228;
+  background-color: #019228;
+  transition: background-color 0.3s, transform 0.3s;
+  padding: 0.5vw;
+  border: none;
+}
+.joinroombuttonbusy{
+
+vertical-align: middle;
+  height: auto;
+
+  
+position: relative;
+right: 0;
+  background: #920101;
+  background-color: #920101;
+  transition: background-color 0.3s, transform 0.3s;
+  padding: 0.5vw;
+  border: none;
+}
+.joinroombutton:hover{
+vertical-align: middle;
+  height: auto;
+
+  position:relative;
+  right: 0;
+  background: #027D23;
+  background-color: #027D23;
+
+  padding: 0.5vw;
+  border: none;
+}
+
+.parent
+{
+
+
+	height: auto;
+  position: relative;
+  width: 100%;
+  border-style: solid; /* Стиль границы */
+  margin-top: 0.5vw;
+  background: #343434;
+  background-color: #343434;
+  border: none;
+}
+.child
+{
+  position: relative;
+	height: auto;
+  padding: 0.5vw;
+  vertical-align: middle;
+  margin-right: 0.5vw;
+	display: inline-table ;
+  background: #434343;
+  background-color: #434343;
+  border: none;
+	width:max-content;
+}
+.parentwithmargin
+{
+  margin-top: 31vw; /* Обнуляем значение отступов */
+
+	height: auto;
+  border-style: solid; /* Стиль границы */
+  border-radius: 5px;
+  border-color: #1A4780; /* Цвет фона */
+}
+
+.childnoborder
+{
+  position: absolute;
+	height: auto;
+  right: 0;
+	display: inline-block;
+	width:auto;
+}
+
+.historytext{
+  font-family: Calibri;
+  color: #F0F8FF;
+  font-size: 1vw;
+ }
+
+.betroomdiscription {
+
+display: inline-table;
+height:max-content;
+  width: auto;
+  height: auto;
+  border-radius: 5px;
+  font-family: Calibri;
+  font-size: 1vw;
+  margin-right:1vw;
+    padding:0.1vw;
+}
+
+.backgroundborder {
+  border-color: #2F2D30;
+    border-radius: 10px;
+    width: 17.5%;
+    border-style: solid; /* Стиль границы */
+    border-radius: 10px; /* Радиус скругления */
+    margin:10px;
+    display: flex;
+justify-content: space-around;
+}
+
+
+
+
+.wrap {
+  width: auto;/*фиксируем ширину обертки*/
+  margin: 0 auto;/*центрируем ее*/
+  height: auto;/*Задаем высоту обертки*/
+ }
+
+.bblock {
+  margin-top: 1vw;
+ 
+  width: 13vw;
+  height: 13vw;
+ float: left; /*Задаем обтекание*/
+ display: flex;
+ 
+ line-height: 40px;/*Высота строки +  верт. центрирования текста*/
+ text-align: center; /*Центрируем текст по горизонтали*/
+ font-size: 10px;
+ border-radius: 5px;
+ border-color: #324AB2;
+ border-style: solid; /* Стиль границы */
+ margin: 1vw;
+
+}
+.wrap :last-child {
+ margin-right: 0px;/*Убираем поле последнего div-а*/
+                }
+
+dialog {
+  background: #3b393d;
+  width: 15vw; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+ }
+
+
+    
+.exitbutton {
+    
+  background-color: #af2626;
+
+    position: relative;
+    display: block;
+    margin:0.7vw;
+    color: #fff;
+    font-family: Calibri;
+    background: #EE687A; /* Для старых браузров */
+    background-color: #EE687A;
+    transition: background-color 1s, transform 0.3s;
+    padding: 0.4vw;
+    border: none;
+}
+#exitbuttontext{
+  float: right;
+ vertical-align: baseline;
+margin-left: 0.5vw;
+}
+.exitbutton:hover {
+  position: relative;
+  background-color: #af2626;
+
+    display: block;
+
+  
+    background: #5548A2; /* Для старых браузров */
+    background-color: #5548A2;
+
+    padding: 0.4vw;
+    border: none;
+}
+
+
+body {
+  background-color: #19181A;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: fedra-sans-pro;
+  /* Гарнитура шрифта */
+  src: url(fonts/font.ttf);
+  /* Путь к файлу со шрифтом */
+}
+
+.playerroomfont {
+  font-family: fedra-sans-pro;
+  font-size: 2vw;
+  color: #F0F8FF;
+  font-weight: bold;
+}
+
+
+
+
+.mainbuttonbackground {
+
+  width: 17.5%;
+  position: relative;
+  border: none;
+}
+
+.nonehistorybackground {
+  border-top: 0.1vw solid grey;
+  border-bottom: 0.1vw solid grey;
+
+  width: 19%;
+
+}
+
+.winhistorybackground {
+  border-top: 0.1vw solid green;
+  border-bottom: 0.1vw solid green;
+
+  width: 19%;
+
+}
+
+.losehistorybackground {
+  border-top: 0.1vw solid red;
+  border-bottom: 0.1vw solid red;
+
+  width: 19%;
+
+}
+
+
+
+
+.betroombackground {
+
+
+  height: max-content;
+  width: auto;
+  border-style: solid;
+  /* Стиль границы */
+  border-radius: 5px;
+  border-color: #1A4780;
+  /* Цвет фона */
+  display: flex;
+  justify-content: space-around;
+  margin: 5px
+}
+
+
+
+.megabetbackground {
+  background-color: #222843;
+  display: block;
+  height: max-content;
+  width: auto;
+  border-radius: 10px;
+
+  border-radius: 10px;
+  /* Радиус скругления */
+  background: #6287D9;
+  /* Цвет фона */
+  display: flex;
+  justify-content: space-around;
+  margin: 10px
+}
+
+
+
+@font-face {
+  font-family: tahoma;
+  /* Гарнитура шрифта */
+  src: url(fonts/tahoma.ttf);
+  /* Путь к файлу со шрифтом */
+}
+
+
+.mainbuttontext {
+  position: absolute;
+  display: inline;
+  white-space: nowrap;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #F0F8FF;
+  font-family: Calibri;
+  font-size: 1vw;
+}
+
+.nametitle {
+
+  color: #F0F8FF;
+  font-family: Calibri;
+  font-size: 1.2vw;
+  margin: 10px
+}
+
+.roomusericonmargin {
+  vertical-align: middle;
+  width: 1vw;
+  height: 1.1vw;
+  margin-left: 0.1vw;
+}
+
+.myfont {
+  color: #F0F8FF;
+  font-weight: bold;
+  margin: 0.2vw;
+  background: #000;
+  padding: 0.1vw;
+}
+
+p {
+  margin-top: 0.1em;
+  /* Отступ сверху */
+  margin-bottom: 0.1em;
+  /* Отступ снизу */
+}
+
+.textdialog {
+  font-size: 1vw;
+  font-family: fedra-sans-pro;
+  font-style: bold;
+  color: #ff0000;
+}
+
+.erroricon {
+  align: center;
+  width: 3vw;
+  height: 3vw;
+}
+
+.pbalance {
+  margin-top: 0.5em;
+  /* Отступ сверху */
+  margin-bottom: 0.1em;
+  /* Отступ снизу */
+}
+
+
+.balancebuttontext {
+  color: #F0F8FF;
+  font-size: 0.8vw;
+  font-family: Calibri;
+}
+
+.betfont {
+  color: #F0F8FF;
+  font-size: 1vw;
+  font-family: Calibri;
+}
+
+.betfontblue {
+  color: #B4B4B4;
+  font-weight: bold;
+  font-size: 1vw;
+  font-family: Calibri;
+}
+
+.betfontleft {
+  color: #F0F8FF;
+  font-size: 1.1vw;
+  float: left;
+  font-family: Calibri;
+}
+
+.betfontcenter {
+  color: #F0F8FF;
+  font-size: 1.1vw;
+  margin: auto;
+  font-family: Calibri;
+}
+
+.betfontright {
+  color: #F0F8FF;
+  float: right;
+  font-size: 1.1vw;
+  font-family: Calibri;
+}
+
+.betfontblack {
+  color: #F0F8FF;
+  font-size: 0.8vw;
+  font-family: tahoma;
+  font-weight: bold
+}
+
+.betfontbet {
+  color: #F0F8FF;
+  font-size: 0.8vw;
+  font-weight: bold
+}
+
+.roomfontusers {
+  color: #F0F8FF;
+  font-size: 30px;
+  font-weight: bold
+}
+
+.mainfont {
+  color: #F0F8FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+  font-weight: bold
+}
+
+.megabetdiscription {
+  color: #F0F8FF;
+  font-size: 2vw;
+  position: relative;
+  display: inline-block;
+  font-weight: bold
+}
+
+.historyfont {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+  font-weight: bold
+}
+
+#content {
+  position: relative;
+  width: 81%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  /* Расстояние от верхнего края */
+  left: 19vw;
+  right: 0;
+}
+
+.contentscroll {
+  display: inline-block;
+  position: relative;
+  width: 80%;
+  height: 35vw;
+
+
+
+}
+
+.container1 {
+
+  width: 81%;
+  height: 100%;
+  position: fixed;
+  overflow: scroll
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+
+#container2chat {
+  width: 81%;
+  height: 96%;
+  position: fixed;
+  overflow-y: scroll
+}
+
+
+#contentmega {
+  position: relative;
+  width: 81%;
+  min-height: 50%;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  /* Расстояние от верхнего края */
+  left: 19vw;
+  bottom: 0;
+  right: 0;
+}
+
+#contentlogo {
+  position: absolute;
+  top: 0px;
+  /* Расстояние от верхнего края */
+  left: 0px;
+
+  bottom: 0;
+  right: 0;
+}
+
+#roomicon {
+  position: absolute;
+  align: left;
+  top: 0%;
+  /* Расстояние от верхнего края */
+
+}
+
+
+.dialog {
+  vertical-align: center;
+}
+
+
+
+.mytext {
+
+  border-style: solid;
+
+  outline: none;
+
+  font-size: 1vw;
+  color: #fff;
+  border: none;
+  background-color: #605E61;
+  outline: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.mytext:hover {
+
+  border-style: solid;
+
+  outline: none;
+
+  font-size: 1vw;
+  color: #fff;
+  border: none;
+  background-color: #7A777D;
+  outline: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.mytextbet {
+  background-color: #616161;
+  width: 15vw;
+  height: 1.7vw;
+  margin: 0.1vw;
+  float: right;
+  display: flex;
+  outline: none;
+  border: none;
+  color: #fff;
+
+  outline: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.mytextmegaroom {
+  background-color: #6287D9;
+  border-radius: 5px;
+  width: 22vw;
+  height: 1.7vw;
+  margin: 0.1vw;
+  display: flex;
+  outline: none;
+  border: none;
+  color: #fff;
+
+  outline: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#list {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.margin-top {
+  margin-top: 10vw;
+}
+
+@font-face {
+  font-family: fedra-sans-pro;
+  /* Гарнитура шрифта */
+  src: url(fonts/font.ttf);
+  /* Путь к файлу со шрифтом */
+}
+
+#inroom {
+  display: none;
+}
+
+::placeholder {
+  color: #BDCCEC;
+  font-family: Calibri;
+  font-size: 1vw;
+
+}
+
+#parent {
+  display: none;
+}
+
+#firsttext {
+  margin-top: 1vw;
+  display: none;
+}
+
+#firstbutton {
+  margin-top: 1vw;
+  display: none;
+}
+
+#mainicons {
+  height: 0.9vw;
+  weight: 0.9vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+#mainiconsbig {
+  height: 1.2vw;
+  width: 1.5vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+#icons {
+  margin-right: 0.5vw;
+  width: 1.3vw;
+  height: 1.3vw;
+
+}
+
+
+
+
+
+.cheapwin {
+  font-family: baiti;
+  font-size: 1.5vw;
+  color: #fff;
+}
+
+.box {
+  display: inline-table;
+  vertical-align: middle;
+}
+
+.minibutton {
+  background: #0061AC;
+  width: auto;
+  height: 2vw;
+  align: center;
+  border: none;
+  margin: 0.1vw;
+  color: #fff;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.minibutton:hover {
+  background: #0061AC;
+  width: auto;
+  height: 2vw;
+  align: center;
+  border: none;
+  margin: 0.1vw;
+  color: #fff;
+
+}
+
+.betroomdiscriptiontext {
+  font-family: Calibri;
+  font-size: 1.2vw;
+  color: #fff;
+  margin: auto;
+  font-weight: bold;
+}
+
+.title {
+
+  color: #fff;
+  font-family: Calibri;
+  font-size: 1.1vw;
+}
+
+.subtitle {
+  color: #8480BC;
+  font-family: Calibri;
+  font-size: 0.8vw;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 0;
+  margin: 0.5vw;
+  font-size: 0.8vw;
+  color: #fff;
+}
+
+.bethistorytext {
+  font-family: Calibri;
+  font-size: 1vw;
+  margin-top: 0.7vw;
+  margin-bottom: 0.5vw;
+  color: #fff;
+}
+
+.leftpanel {
+  background: #222123;
+  height: 20vw;
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: absolute;
+  width: 462px;
+
+}
+
+#block {
+
+  display: flex;
+  align-items: center;
+}
+
+.chatinput {
+
+  border-style: solid;
+  outline: none;
+  width: 100%;
+  height: 90%;
+  text-align: top;
+  resize: vertical;
+  font-size: 1vw;
+  color: #fff;
+  border: none;
+  background-color: #605E61;
+  outline: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.sendchatinput {
+
+  border-style: solid;
+  outline: none;
+  width: 100%;
+  height: 5%;
+  font-family: Calibri;
+  font-size: 1.3vw;
+  font-weight: bold;
+  font-size: 1vw;
+  color: #fff;
+  border: none;
+  background-color: #019228;
+  outline: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#roommega {
+  display: inline-block;
+  position: relative;
+  vertical-align: bottom;
+}
+
+.chatdiv {
+
+  position: fixed;
+  width: 50%;
+  height: 100%;
+}
+
+.senddiv {
+  position: fixed;
+  right: 0;
+  min-height: 100%;
+  width: 30%;
+
+
+}
+
+.inline {
+  display: inline-table;
+}
+
+#historybettext {
+  display: none;
+  background: #222123;
+  font-family: Calibri;
+  margin-top: 0.5vw;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 5;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* затемнение фона */
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.overlay .flex-popap {
+  height: 100%;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay .flex-popap .popap {
+  position: relative;
+  background-color: #373639;
+  /* цвет фона всплывающего блока */
+  padding: 35px 25px;
+  padding: auto;
+  margin: auto;
+  overflow: auto;
+}
+
+.popap span {
+  position: absolute;
+  background: #743649;
+  right: 0;
+  width: 1.3vw;
+  height: 100%;
+  text-align: center;
+
+}
+
+.close_popap {
+  color: #fff;
+  text-align: center;
+  font-family: Calibri;
+
+}
+
+.head_popup {
+  color: #fff;
+  background: #535353;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: left;
+  font-size: 1.3vw;
+  font-style: bold;
+  width: 100%;
+  font-family: Calibri;
+}
+
+.historyparent {
+  border: 0.1vw;
+  border-color: #707070;
+  border-style: solid;
+  height: auto;
+  padding: 0.1vw;
+  display: none;
+  position: relative;
+  width: 99%;
+  margin-top: 0.5vw;
+}
+
+
+.roomsbutton {
+  height: 54px;
+  width: 404px;
+  position: relative;
+    border: none;
+    margin: 0.1vw;
+    padding: 0;
+  border-style: solid;
+  border: none;
+    background-color: #3917AC; /* Для старых браузров */
+    transition: background-color 0.3s, transform 0.3s;
+
+}
+.roomsbutton:hover {
+
+  background-color: #311391; /* Для старых браузров */
+}
+.historybutton {
+  height: 54px;
+  width: 404px;
+  position: relative;
+    border: none;
+    margin: 0.1vw;
+    padding: 0;
+  border-style: solid;
+  border: none;
+    background-color: #1B40D5; /* Для старых браузров */
+    transition: background-color 0.3s, transform 0.3s;
+
+}
+.historybutton:hover {
+
+  background-color: #122b8d; /* Для старых браузров */
+}
+.roomcreatebutton {
+  position: relative;
+  width: 404px;
+  height: 54px;
+    border-style: solid;
+    margin: 0.1vw;
+    padding: 0;
+    vertical-align: middle;
+
+  border: none;
+    background-color: #5302BC;
+    transition: background-color 0.3s, transform 0.3s;
+
+}
+.roomcreatebutton:hover {
+    background-color:  rgb(73, 9, 170)
+}
+
+.backgroundiconmain{
+  width:2.5vw;
+  height:2.5vw;
+  float:left;
+top: 0;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);;
+}
+
+
+.leftdiv{
+  background: #4e1d80;
+  background-color: #502779;
+}
+
+
+
+
+
+
+  .mainbuttonbackground {
+
+    
+    width: 340px;
+
+flex-direction: column;
+display: block;
+    
+border-style: solid;
+      display: flex;
+justify-content: space-around;
+      margin:0.5vw;
+  }
+
+
+
+
+
+
+  .megabetbackground {
+    background-color: #F5F5F5;
+    display:block;
+height:max-content;
+    width: auto;
+      border-radius: 10px;
+
+      border-radius: 10px; /* Радиус скругления */
+      background: #F5F5F5; /* Цвет фона */
+      display: flex;
+justify-content: space-around;
+      margin:10px
+  }
+
+  @font-face {
+font-family: tahoma; /* Гарнитура шрифта */
+src: url(fonts/tahoma.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+  font-family: captchacode; 
+  src: url(fonts/captchacode.ttf); 
+ }
+@font-face {
+  font-family: fedra-sans-pro; /* Гарнитура шрифта */
+  src: url(fonts/font.ttf); /* Путь к файлу со шрифтом */
+ }
+
+
+.nametitle{
+font-family: tahoma;
+margin:10px
+}
+.myfont{
+color: #fff;
+font-weight: bold
+}
+.megabetwarning{
+  color: #FC3F3F;
+  font-weight: bold
+  }
+
+.exitfont{
+    color: #fff;
+    font-size: 1vw;
+display:flex;
+left: 50%;
+        top: 50%;
+    font-weight: bold
+    }
+
+.betfontbet{
+color: #000;
+font-size: 30px;
+font-weight: bold
+}
+.roomfontusers{
+color: #000;
+font-size:30px;
+font-weight: bold
+}
+.mainfont{
+color: #000000;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size:23px;
+font-weight: bold
+}
+.megabetdiscription{
+color: #000000;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size:33px;
+padding: 14px;
+font-weight: bold
+}
+@font-face {
+  font-family: baiti; /* Гарнитура шрифта */
+  src: url(fonts/Baiti.ttf); /* Путь к файлу со шрифтом */
+ }
+.historyfont{
+color: #fff;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size:23px;
+font-weight: bold
+}
+#content {
+display: inline-block;
+position: relative;
+top: 0; /* Расстояние от верхнего края */
+left: 350px;
+
+bottom: 0; right: 0;
+}
+#contentmega {
+display: inline-block;
+position: absolute;
+top: 0; /* Расстояние от верхнего края */
+left: 800px;
+
+bottom: 0; right: 0;
+}
+#contentlogo {
+
+position: absolute ;
+top: 0px; /* Расстояние от верхнего края */
+left: 0px;
+
+bottom: 0; right: 0;
+}
+
+
+.betroom{
+
+    border-radius: 5px;
+    width: auto;
+    height: auto;
+    color: #fff;
+    margin:6px;
+    border-color:#2A52BE;
+    border-style: solid; /* Стиль границы */
+    padding: 10px;
+    float: right; /*Задаем обтекание*/
+display: flex;
+}

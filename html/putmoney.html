@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            body{
+        background-color:#19181A;
+    }
+    .cbutton {
+    
+    background-color: #7E86FF;
+
+    position: relative;
+      width: 20vw;
+       height: 3vw;
+       text-align:center;
+       background: #7E86FF;
+      transition: background-color 0.3s, transform 0.3s;
+      padding: 1vw;
+      margin-top: 2vw;
+      margin-bottom: 1vw;
+      border: none;
+    }
+.cbutton:hover {
+
+    background-color: #6b73da;
+
+    
+      width: 20vw;
+       height: 3vw;
+       text-align:center;
+       background: #6b73da;
+      transition: background-color 0.3s, transform 0.3s;
+      padding: 1vw;
+      margin-top: 2vw;
+      margin-bottom: 1vw;
+      border: none;
+}
+.buttontext{
+  color:#fff;
+  font-size:1.1vw;
+  left: 50%;
+  white-space: nowrap;
+        top: 50%;
+        transform: translate(-50%,-50%);
+
+  position: absolute;
+}
+.nametitle {
+    font-family: sans-serif;
+    font-size: 2vw;
+    font-weight: 10; /* Жирное начертание */
+    display: block;
+    color: #fff;
+   }
+   .center{
+     position: absolute;
+     left: 50%;
+        top: 40%;
+        transform: translate(-50%,-50%);
+   }
+   .mytext {
+
+background-color: #16151D;
+width: 20vw;
+height: 3vw;
+margin-top:1.4vw;
+display: block;
+position: relative;
+   outline: none;
+   padding-left: 0.5vw;
+   border-color: #787FF8;
+border-style: solid;
+font-family: Calibri;
+font-size:1vw;
+color: #C5C8F8;
+outline: none;
+transition: background-color 0.3s, transform 0.3s;
+
+
+}
+.mytext:hover {
+border-color: #787FF8;
+background-color: #242647;
+width: 20vw;
+height: 3vw;
+margin-top:1.4vw;
+padding-left: 0.5vw;
+display: block;
+   outline: none;
+border-style: solid;
+
+font-size:1vw;
+color: #C5C8F8;
+outline: none;
+
+}
+.fff{
+ position: fixed;
+ left: 50%;
+        top: 50%; /* Положение подсказки */
+        transform: translate(-50%,-50%);
+}
+.f{
+  display: inline-block;
+}
+.choosenbutton{
+    width: 10vw;
+    height: 3vw;
+    color: #fff;
+    border: none;
+    font-size:1vw;
+    font-family: Calibri;
+    background: #7E86FF;
+    background-color: #7E86FF;
+}
+.nochoosenbutton{
+    font-family: Calibri;
+    font-size:1vw;
+    width: 10vw;
+    height: 3vw;
+    color: #fff;
+    border: none;
+    background: #444888;
+    background-color: #444888;
+}
+h1{
+    font-size: 1.2vw;
+    margin: 1vw;
+    color:#fff;
+    font-family: Calibri;
+}
+    </style>
+</head>
+<body>
+    <div class="fff">
+        <div class="f">
+            <center> <img src="/images/logowithoutbackground.png" class="logo">
+                <div class="nametitle">CheapWin</div>
+                <p><h1>Пополнить счет</h1></p>
+           
+          <button class="choosenbutton">qiwi</button>  <button class="nochoosenbutton">payeer</button>
+          <p>   <button class="nochoosenbutton">PayPal</button>  <button class="nochoosenbutton">Карта</button></p>
+          <form  name="form" id="form" method="post">    
+            <p> <input  style="font-weight: bold" id="login" class="mytext" type = "text" name="login" placeholder="Логин" ></p>
+           <button class = "cbutton"  type="submit"><font class="buttontext" id="cbutton"><b>зарегистрироваться</b></font></button>
+        </form>
+    </center>
+        </div>
+        
+
+      </div>
+</body>
+</html>
