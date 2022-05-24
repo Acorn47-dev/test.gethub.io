@@ -67,7 +67,7 @@ body {
     margin: 0 auto;
     max-width: 1640px;
     height: auto;
-    margin: 0px auto;
+    padding: 5px;
     box-sizing: content-box;
 }
 
@@ -97,19 +97,20 @@ body {
 .header__menu-item {
     color:#fff;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 700;
     margin: 16px 0px 0px 22px;
 }
 
 .header__menu-link {
     text-decoration: none;
     color: inherit;
+    transition: all 0.3s;
 }
 .header__menu-link:hover{
     text-decoration: underline;
     color: inherit;
 }
-
+/**----------заголовок с логотипом (АДАПТАЦИЯ)----------*/
 @media (max-width: 960px){
     .menu-container{
         display:flex;
@@ -141,7 +142,6 @@ body {
     }
 }
 
-
 @media (max-width: 520px){
     .header__menu-item{
         font-size: 15px;
@@ -152,6 +152,7 @@ body {
         font-size: 10px;
     }
 }
+/**----------заголовок с логотипом (АДАПТАЦИЯ)----------*/
 
 
 
@@ -276,7 +277,7 @@ flex-direction: row;
     justify-content: center;
     justify-items: center;
     align-items: center;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .balance-text {}
@@ -288,7 +289,7 @@ flex-direction: row;
 
 .balance__btn {
     font-size: 25px;
-    font-weight: bold;
+    font-weight: 700;
     background: #39373A;
     border: none;
     display: flex;
@@ -334,7 +335,7 @@ flex-direction: row;
 
 .mainbutton {
     width: auto;
-    height: 54px;
+    height: 48px;
     border: none;
     display: flex;
     padding-right: 20px;
@@ -342,6 +343,33 @@ flex-direction: row;
     border-radius: 22px;
     vertical-align: middle;
     justify-items: center;
+    transition: all 0.3s;
+}
+
+.background-icon {
+   
+    width: 38px;
+    height: 38px;
+    
+    margin: 5px 0px 0px 7px;
+    border-radius: 99px;
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.mainbutton:nth-child(1n) .background-icon{
+    background: #5302BC;
+}
+.mainbutton:nth-child(2n) .background-icon{
+    background: #3917AC;
+}
+.mainbutton:nth-child(3n) .background-icon{
+    background: #1734AC;
+}
+
+.mainbutton:hover {
+background: #0053bf;
 }
 
 .mainbutton:not(:last-child ){
@@ -357,7 +385,7 @@ align-items: center;
 flex-wrap: wrap;
 
 }
-.mainbutton:nth-child(1n) :hover{
+/* .mainbutton:nth-child(1n) :hover{
     background: #5302BC;
 }
 
@@ -367,20 +395,9 @@ flex-wrap: wrap;
 
 .mainbutton:nth-child(3n) :hover{
     background: #1734AC;
-}
+} */
 
-.background-icon {
-    background: #5302BC;
-    width: 38px;
-    height: 38px;
-    
-    margin: 8px 0px 0px 7px;
-    border-radius: 99px;
-    display: inline-flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
+
 
 .icon-btn {
 
@@ -400,7 +417,7 @@ flex-wrap: wrap;
 .mainbutton__background-text {
     font-size: 21px;
     color: #fff;
-    font-weight: bold;
+    font-weight: 700;
     margin: 0px 0px 0px 10px;
     line-height: 250%;
 }
@@ -408,12 +425,15 @@ flex-wrap: wrap;
 main-button__container{
     background:grey;
 }
+
+/* *----------основные кнопки (АДАПТАЦИЯ) ----------*/
 @media (max-width: 800px){
     .mainbutton:nth-child(1n){
         width: 100%;
         margin: 5px 0px 0px 0px;
     }
 }
+/* *----------основные кнопки (АДАПТАЦИЯ) ----------*/
 /* *----------основные кнопки ----------*/
 
 
@@ -436,7 +456,7 @@ main-button__container{
     align-items: center;
     flex-direction: row;
     color: #fff;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .last-bet__text-container {
@@ -517,7 +537,10 @@ main-button__container{
     color:#fff;
     padding: 0px 0px 0px 10px;
 }
-
+.main-info__input{
+    color:#fff;
+    padding-left: 10px;
+}
 .rightpanel__body {
     
 }
@@ -538,4 +561,122 @@ main-button__container{
     width: 100%;
     display: flex;
     flex-direction: row;
+}
+
+
+/* *----------главная информация----------*/
+.main-info {
+
+}
+.main-info__background {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.info-background {
+    background: #232323;
+}
+.main-info__container {
+}
+.container {
+}
+
+
+.info-body {
+    display: flex;
+    flex: wrap;
+    position: relative;
+    width: 100%;
+    margin: 9px 0px 0px 0px;
+    justify-content: space-between;
+}
+
+.main-info__texts {
+    display:flex;
+   
+    position: relative;
+}
+.main-info__text {
+    color:#FFFFFF;
+    flex: wrap;
+    font-size: 20px;
+    white-space: nowrap;
+}
+.main-info__text:not(:last-child){
+    margin-right: 22px;
+}
+.main-info__search {
+    display: flex;
+}
+.main-info__input {
+    background: #464646;
+    height: 100%;
+    border: none;
+    border-radius: 13px 0px 0px 13px;
+    outline: none;
+}
+.main-info__button-search {
+    background: #707070;
+    height: 100%;
+    border: none;
+    border-radius: 0px 13px 13px 0px;
+    padding: 0px 5px 0px 5px;
+
+}
+@media (max-width: 680px){
+    .info-body {
+        flex-direction: column;
+    }
+    .main-info__input{
+        width: 100%;
+    }
+    .main-info__search{
+        padding: 5px;
+    }
+}
+/* *----------главная информация----------*/
+
+.list-room__text
+{
+  position: relative;
+  padding: 9px;
+  display: flex;
+
+  background: #434343;
+  background-color: #434343;
+}
+.list-room__text:not(:last-child){
+    margin-right: 5px;
+}
+.text-column{
+    display: flex;
+}
+.list-room
+{ 
+    position: relative;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: auto;
+ 
+  width: 100%;
+  border-style: solid; /* Стиль границы */
+  margin-top: 0.5vw;
+  background: #343434;
+  background-color: #343434;
+  border: none;
+}
+.rooms__list{
+    width: 100%;
+}
+.room__text{
+    color:#fff;
+    font-size: 22px;
+}
+.room__button{
+    background: #019228;
+    border: none;
+    color:#fff;
+    font-size:22px ;
+    padding: 9px 28px 9px 28px;
 }

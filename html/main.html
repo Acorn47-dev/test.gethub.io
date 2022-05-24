@@ -7,10 +7,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="../css/main.css" rel="stylesheet">
         <title>Document</title>
+
     </head>
 
     <body>
-        <div class="wrapper">   
+        <div class="wrapper">
             <header class="header">
                 <div class="header__container container">
                     <div class="header__logo">
@@ -27,10 +28,12 @@
                         </div>
                         <div class="header__menu-right menu-right">
                             <ul class="header__menu">
-                                <li class="header__menu-item" style="color:#FF1E1E"><a href="" class="header__menu-link">Пополнить</a> </li>
-                                <li class="header__menu-item" style="color:#1EFF62"><a href="" class="header__menu-link">Вывести</a> </li>
+                                <li class="header__menu-item" style="color:#FF1E1E"><a href=""
+                                        class="header__menu-link">Пополнить</a> </li>
+                                <li class="header__menu-item" style="color:#1EFF62"><a href=""
+                                        class="header__menu-link">Вывести</a> </li>
                                 <li class="header__menu-item "><a href="" class="header__menu-link item-balance">₽
-                                        1000000000</a> </li>
+                                        0</a> </li>
                                 <li class="header__menu-item item-user__login"><a href="" class="header__menu-link">Вася
                                         пупкин</a> </li>
                                 <li class="header__menu-item item-user__id"><a href="" class="header__menu-link">id:
@@ -42,32 +45,85 @@
                     </div>
                 </div>
             </header>
-            <main class="main-buttons">
-                <div class="main-button__background">
-                    <div class="main-button__container container">
-                        <div class="main-button__buttons">
-                            <button class="mainbutton">
-                                <div class="background-icon ">
-                                    <img src="/images/createicon.png" class="icon-btn" alt="create">
-                                </div>
-                                <div class="mainbutton__background-text">Создать комнату</div>
-                            </button>
-                            <button class="mainbutton">
-                                <div class="background-icon ">
-                                    <img src="/images/defultgame.png" class="icon-btn" alt="create">
-                                </div>
-                                <div class="mainbutton__background-text">Игровые комнаты</div>
-                            </button>
-                            <button class="mainbutton">
-                                <div class="background-icon ">
-                                    <img src="/images/historyicon.png" class="icon-btn" alt="create">
-                                </div>
-                                <div class="mainbutton__background-text">История ставок</div>
-                            </button>
+            <main class="main">
+                <div class="main-buttons">
+                    <div class="main-button__background">
+                        <div class="main-button__container container">
+                            <div class="main-button__buttons">
+                                <button class="mainbutton">
+                                    <div class="background-icon ">
+                                        <img src="/images/createicon.png" class="icon-btn" alt="create">
+                                    </div>
+                                    <div class="mainbutton__background-text">Создать комнату</div>
+                                </button>
+                                <button class="mainbutton">
+                                    <div class="background-icon ">
+                                        <img src="/images/defultgame.png" class="icon-btn" alt="create">
+                                    </div>
+                                    <div class="mainbutton__background-text">Игровые комнаты</div>
+                                </button>
+                                <button class="mainbutton">
+                                    <div class="background-icon ">
+                                        <img src="/images/historyicon.png" class="icon-btn" alt="create">
+                                    </div>
+                                    <div class="mainbutton__background-text">История ставок</div>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-               
+                <div class="main-info">
+                    <div class="main-info__background info-background">
+                        <div class="main-info__container container">
+                            <div class="main-info__body info-body">
+                                <div class="main-info__texts">
+                                    <div class="main-info__text">Комнаты с игроками</div>
+                                    <div class="main-info__text">Всего комнат: 0</div>
+                                </div>
+                                <div class="main-info__search">
+                                    <input type="search" class="main-info__input">
+                                    <button class="main-info__button-search">
+                                        <img src="../images/searchicon.png" alt="search">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rooms">
+                    <div class="rooms__container container">
+                        <ul class="rooms__list">
+                            <li class="rooms__list-item list-room">
+                                <div class="text-column">
+                                    <div class="list-room__text">
+                                        <span class="room__text text__id">id: 666</span>
+                                    </div>
+                                    <div class="list-room__text">
+                                        <span class="room__text text__type">тип комнаты</span>
+                                    </div>
+                                    <div class="list-room__text">
+                                        <span class="room__text text__bet">тип комнаты</span>
+                                    </div>
+                                    <div class="list-room__text">
+                                        <span class="room__text text__win">тип комнаты</span>
+                                    </div>
+                                    <div class="list-room__text">
+                                        <span class="room__text text__limit">тип комнаты</span>
+                                    </div>
+                                </div>
+                                <div class="list-room__buttons">
+                                    <button class="room__button" onclick="watchgame(this.id)" id="spectatorbutton"
+                                        name="spectatorbutton" value="spectatorbutton"> посмотреть
+                                    </button>
+                                    <button class="room__button" onclick="show_popap('modal-2',this.id)"
+                                        id="nullidroom" name="nullidroom" value="nullidroom">присоединиться
+                                    </button>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
             </main>
         </div>
     </body>
