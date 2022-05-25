@@ -685,9 +685,37 @@ main-button__container {
 
 .list-room__buttons {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .button-icon {
     width: 27px;
     height: 27px;
+}
+@media (max-width: 1024px){
+    .list-room__buttons{
+        margin-right: 0;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+    .room__button{
+        width: 50%;
+       
+    }
+}
+@media (max-width: 425px){
+    .list-room__buttons{
+        width: 100%;
+        display: block;
+        flex-wrap: wrap;
+    }
+    .room__button{
+        width: 100%;
+        margin-right: 0px;
+    }
+    .room__button:last-child{
+        width: 100%;
+        margin-right: 0px;
+    }
+    
 }
