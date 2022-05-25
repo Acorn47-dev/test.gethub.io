@@ -1,3 +1,25 @@
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #141414;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
 *,
 *:before,
 *:after {
@@ -31,14 +53,12 @@ ul.list li {
     /* Отступ слева в браузере Firefox, Safari, Chrome */
 }
 
-
-
 body {
     background: #19181A;
     font-family: Calibri;
 }
 
-.header{
+.header {
     position: relative;
     z-index: 50;
     left: 0;
@@ -53,7 +73,6 @@ body {
     background: #222123;
 }
 
-
 .wrapper {
     position: relative;
     min-height: 100%;
@@ -61,9 +80,10 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 .container {
     position: relative;
-    display:flex;
+    display: flex;
     margin: 0 auto;
     max-width: 1640px;
     height: auto;
@@ -83,22 +103,28 @@ body {
     margin: 0px 0px 0px 27px;
 }
 
-.header__logo {
+.header__logo {}
 
-}
-.header__menu-left {
-}
+.header__menu-left {}
+
 .header__menu {
-    display:flex;
+    display: flex;
 }
-.header__container{
+
+.header__container {
     padding: 11px 0px 11px 0px;
 }
+
 .header__menu-item {
-    color:#fff;
+    color: #fff;
     font-size: 20px;
     font-weight: 700;
     margin: 16px 0px 0px 22px;
+}
+
+.icon-header {
+    width: 15px;
+    height: 15px;
 }
 
 .header__menu-link {
@@ -106,132 +132,99 @@ body {
     color: inherit;
     transition: all 0.3s;
 }
-.header__menu-link:hover{
+
+.header__menu-link:hover {
     text-decoration: underline;
     color: inherit;
 }
+
+.exit-text {
+    color: rgb(255, 139, 187);
+}
+
 /**----------заголовок с логотипом (АДАПТАЦИЯ)----------*/
-@media (max-width: 960px){
-    .menu-container{
-        display:flex;
-        width: 100%;
-        flex-direction: column;
-    }
+@media (max-width: 960px) {
     .header__container{
-        position: relative;
-        display:flex;
+        display: flex;
         justify-content: center;
         justify-items: center;
         align-items: center;
         flex-direction: column;
-        text-align: center;
-        left: 50%;
-        white-space: nowrap; /* Переносов в тексте нет */
-        transform: translateX(-50%);
-    }
-    .menu-container{
-        display:flex;
-        justify-content: center;
-        justify-items: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-    }
-    .header__logo{
-
     }
 }
 
-@media (max-width: 520px){
-    .header__menu-item{
-        font-size: 15px;
-    }
-}
-@media (max-width: 425px){
-    .header__menu-item{
-        font-size: 10px;
-    }
-}
+
+
 /**----------заголовок с логотипом (АДАПТАЦИЯ)----------*/
-
-
-
-.menu-container{
-    display:flex;
+.menu-container {
+    display: flex;
     width: 100%;
-    flex-wrap: wrap;
+    overflow-x: scroll;
+    white-space: nowrap;
+    overflow-y: hidden;
     justify-content: space-between;
 }
 
+.header__menu-item {}
 
+.header__balance-block {}
 
-.header__menu-item {
-}
-
-.header__balance-block {
-}
 .balance-block {
     background: #373737;
-display: flex;
-max-height: 24px;
-flex-direction: row;
+    display: flex;
+    max-height: 24px;
+    flex-direction: row;
 }
+
 .balance-block__currency {
     background: #565656;
     width: 18px;
     height: 37px;
-    color:#fff;
+    color: #fff;
     text-align: center;
     font-size: 20px;
-
 }
+
 .balance-block__text {
-    color:#fff;
+    color: #fff;
     font-size: 20px;
     margin: 0px 0px 0px 10px;
 }
 
-.item-user__exit{
+.item-user__exit {}
 
-}
-.item-balance{
+.item-balance {
     font-weight: 200;
+    border-radius: 5px;
     background: #333333;
-    padding: 5px 10px 5px 10px;
-  
+    padding: 0px 5px;
 }
 
-.menu-right{
+.menu-right {
     display: flex;
 }
-.balance-block{
+
+.balance-block {
     display: flex;
 }
 
 /**----------заголовок с логотипом ----------*/
-
 /* *----------окно с информацией об игроке ----------*/
 /* .user__block {} */
-
 .user {
     margin: 25px 0px 0px 0px;
 }
 
 /* .user__container {}
-
 .user-container {} */
-
 .user__text {
     color: #fff;
     font-size: 30px;
 }
 
 /* .login-user {}
-
 .id-user {}
-
 .user__exit-btn {} */
-
 .exit-btn {
     margin: 12px 0px 0px 0px;
     padding: 0px 10px 5px 10px;
@@ -246,14 +239,12 @@ flex-direction: row;
 }
 
 /* .btn-container {} */
-
 .exit-btn__text {
     color: #fff;
     font-size: 23px;
 }
 
 /* *----------sокно с информацией об игроке ----------*/
-
 /* *----------баланс ----------*/
 .balance__block {}
 
@@ -322,10 +313,8 @@ flex-direction: row;
 }
 
 /* *----------баланс ----------*/
-
 /* *----------основные кнопки ----------*/
-
-.main-button__background{
+.main-button__background {
     position: relative;
     width: 100%;
     border-top: 1px solid #303030;
@@ -347,10 +336,8 @@ flex-direction: row;
 }
 
 .background-icon {
-   
     width: 38px;
     height: 38px;
-    
     margin: 5px 0px 0px 7px;
     border-radius: 99px;
     display: inline-flex;
@@ -358,59 +345,65 @@ flex-direction: row;
     flex-direction: column;
     align-items: center;
 }
-.mainbutton:nth-child(1n) .background-icon{
+
+.mainbutton:nth-child(1n) .background-icon {
     background: #5302BC;
 }
-.mainbutton:nth-child(2n) .background-icon{
+
+.mainbutton:nth-child(2n) .background-icon {
     background: #3917AC;
 }
-.mainbutton:nth-child(3n) .background-icon{
+
+.mainbutton:nth-child(3n) .background-icon {
+    background: #1734AC;
+}
+
+.mainbutton:nth-child(1n):hover {
+    background: #5302BC;
+}
+
+.mainbutton:nth-child(2n):hover {
+    background: #3917AC;
+}
+
+.mainbutton:nth-child(3n):hover {
     background: #1734AC;
 }
 
 .mainbutton:hover {
-background: #0053bf;
+    background: #2b3675;
 }
 
-.mainbutton:not(:last-child ){
-margin: 0px 5px 0px 0px; 
+.mainbutton:not(:last-child) {
+    margin: 0px 5px 0px 0px;
 }
 
-.main-button__buttons{
-display: flex;
-width: 100%;
-justify-content: center;
-justify-items: center;
-align-items: center;
-flex-wrap: wrap;
-
+.main-button__buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
+
 /* .mainbutton:nth-child(1n) :hover{
     background: #5302BC;
 }
-
 .mainbutton:nth-child(2n) :hover{
     background: #3917AC;
 }
-
 .mainbutton:nth-child(3n) :hover{
     background: #1734AC;
 } */
-
-
-
 .icon-btn {
-
-
-    width: 27px;
-    height: 27px;
+    width: 24px;
+    height: 24px;
 }
-
 
 .main-container {
     margin-top: 22px;
 }
-
 
 .mainbutton__background-icon {}
 
@@ -422,21 +415,20 @@ flex-wrap: wrap;
     line-height: 250%;
 }
 
-main-button__container{
-    background:grey;
+main-button__container {
+    background: grey;
 }
 
 /* *----------основные кнопки (АДАПТАЦИЯ) ----------*/
-@media (max-width: 800px){
-    .mainbutton:nth-child(1n){
+@media (max-width: 800px) {
+    .mainbutton:nth-child(1n) {
         width: 100%;
         margin: 5px 0px 0px 0px;
     }
 }
+
 /* *----------основные кнопки (АДАПТАЦИЯ) ----------*/
 /* *----------основные кнопки ----------*/
-
-
 /* *----------последняя ставка ----------*/
 .last-bet {}
 
@@ -477,7 +469,6 @@ main-button__container{
 }
 
 /* *----------последняя ставка ----------*/
-
 /* *----------правая панель ----------*/
 .rightpanel {
     flex: 1 0;
@@ -485,18 +476,15 @@ main-button__container{
 
 .rightpanel__container {}
 
-.rightpanel-container {
-
-}
+.rightpanel-container {}
 
 .rightpanel__header {}
 
 .header-texts {
     display: flex;
-
 }
 
-.rightpanel-header{
+.rightpanel-header {
     background: #38363A;
     display: flex;
     flex-direction: row;
@@ -504,110 +492,106 @@ main-button__container{
 }
 
 .rightpanel-header__text {
-    color:#fff;
+    color: #fff;
     font-size: 25px;
 }
+
 .rightpanel-header__text:not(:last-child) {
     margin: 00px 20px 0px 0px;
 }
 
 .rightpanel__body {}
 
-.rightpanel-header__search {
-}
-.search {
-    
-}
+.rightpanel-header__search {}
 
-.search__button{
+.search {}
+
+.search__button {
     border: none;
     height: 100%;
     padding: 0px 10px 0px 10px;
     background: #4b4b4b;
-    color:#fff;
+    color: #fff;
 }
+
 .search__input {
     background: #6b6b6b;
     border: none;
-    color:#fff;
+    color: #fff;
     height: 100%;
     padding: 0px 0px 0px 10px;
 }
-::placeholder{
-    color:#fff;
+
+::placeholder {
+    color: #fff;
     padding: 0px 0px 0px 10px;
 }
-.main-info__input{
-    color:#fff;
+
+.main-info__input {
+    color: #fff;
     padding-left: 10px;
 }
-.rightpanel__body {
-    
-}
-.rightpanel-body {
-  
 
-}
-.rightpanel-body__container {
-}
+.rightpanel__body {}
 
-.test{
-    color:#fff;
+.rightpanel-body {}
+
+.rightpanel-body__container {}
+
+.test {
+    color: #fff;
 }
 
 /* *----------правая панель ----------*/
-
 .adaptive__column-row {
     width: 100%;
     display: flex;
     flex-direction: row;
 }
 
-
 /* *----------главная информация----------*/
-.main-info {
+.main-info {}
 
-}
 .main-info__background {
     position: relative;
     height: 100%;
     width: 100%;
 }
+
 .info-background {
     background: #232323;
 }
-.main-info__container {
-}
-.container {
-}
 
+.main-info__container {}
 
 .info-body {
     display: flex;
     flex: wrap;
     position: relative;
     width: 100%;
-    margin: 9px 0px 0px 0px;
     justify-content: space-between;
 }
 
 .main-info__texts {
-    display:flex;
-   
+    display: flex;
     position: relative;
 }
+
 .main-info__text {
-    color:#FFFFFF;
+    color: #FFFFFF;
     flex: wrap;
     font-size: 20px;
     white-space: nowrap;
 }
-.main-info__text:not(:last-child){
+
+.main-info__text:not(:last-child) {
     margin-right: 22px;
 }
+
 .main-info__search {
     display: flex;
 }
+
 .main-info__input {
     background: #464646;
     height: 100%;
@@ -615,68 +599,95 @@ main-button__container{
     border-radius: 13px 0px 0px 13px;
     outline: none;
 }
+
 .main-info__button-search {
     background: #707070;
     height: 100%;
     border: none;
     border-radius: 0px 13px 13px 0px;
     padding: 0px 5px 0px 5px;
-
 }
-@media (max-width: 680px){
+
+@media (max-width: 680px) {
     .info-body {
         flex-direction: column;
     }
-    .main-info__input{
+
+    .main-info__input {
         width: 100%;
     }
-    .main-info__search{
+
+    .main-info__search {
         padding: 5px;
     }
 }
+
 /* *----------главная информация----------*/
-
-.list-room__text
-{
-  position: relative;
-  padding: 9px;
-  display: flex;
-
-  background: #434343;
-  background-color: #434343;
+.list-room__text {
+    position: relative;
+    padding: 9px;
+    display: flex;
+    background: #434343;
+    background-color: #434343;
 }
-.list-room__text:not(:last-child){
+
+.list-room__text:not(:last-child) {
     margin-right: 5px;
 }
-.text-column{
+
+.text-column {
     display: flex;
+    flex-wrap: wrap;
 }
-.list-room
-{ 
+
+.list-room {
     position: relative;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     height: auto;
- 
-  width: 100%;
-  border-style: solid; /* Стиль границы */
-  margin-top: 0.5vw;
-  background: #343434;
-  background-color: #343434;
-  border: none;
+    width: 100%;
+    border-style: solid;
+    /* Стиль границы */
+    margin-top: 0.5vw;
+    background: #343434;
+    background-color: #343434;
+    border: none;
 }
-.rooms__list{
+
+.rooms__list {
     width: 100%;
 }
-.room__text{
-    color:#fff;
+
+.room__text {
+    color: #fff;
     font-size: 22px;
 }
-.room__button{
+
+.room__button {
     background: #019228;
     border: none;
-    color:#fff;
-    font-size:22px ;
+    color: #fff;
+    font-size: 22px;
+    display: flex;
     padding: 9px 28px 9px 28px;
+}
+
+.room__button:not(:last-child) {
+    margin-right: 5px;
+}
+
+.room__button-icon {
+    width: 27px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.list-room__buttons {
+    display: flex;
+}
+
+.button-icon {
+    width: 27px;
+    height: 27px;
 }

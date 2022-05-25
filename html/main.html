@@ -7,7 +7,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="../css/main.css" rel="stylesheet">
         <title>Document</title>
-
     </head>
 
     <body>
@@ -15,15 +14,23 @@
             <header class="header">
                 <div class="header__container container">
                     <div class="header__logo">
-                        <img src="../images/logowithoutbackground.png" alt="logo">
+                        <img src="../images/logo-icon.svg" alt="logo">
                     </div>
                     <div class="header__menu-container menu-container">
                         <div class="header__menu-left">
                             <ul class="header__menu">
-                                <li class="header__menu-item"><a href="" class="header__menu-link">О нас</a> </li>
-                                <li class="header__menu-item"><a href="" class="header__menu-link">Наш телеграмм</a>
+                                <li class="header__menu-item">
+                                    <img src="../images/info-icon.svg" class="icon-header" alt="user-icon">
+                                    <a href="" class="header__menu-link">О нас</a> 
                                 </li>
-                                <li class="header__menu-item"><a href="" class="header__menu-link">Помощь</a> </li>
+                                <li class="header__menu-item">
+                                    <img src="../images/telegram-icon.svg" class="icon-header" alt="user-icon">
+                                    <a href="" class="header__menu-link">Наш Telegram</a> 
+                                </li>
+                                <li class="header__menu-item">
+                                    <img src="../images/help-icon.svg" class="icon-header" alt="user-icon">
+                                    <a href="" class="header__menu-link">Помощь</a> 
+                                </li>
                             </ul>
                         </div>
                         <div class="header__menu-right menu-right">
@@ -34,12 +41,13 @@
                                         class="header__menu-link">Вывести</a> </li>
                                 <li class="header__menu-item "><a href="" class="header__menu-link item-balance">₽
                                         0</a> </li>
-                                <li class="header__menu-item item-user__login"><a href="" class="header__menu-link">Вася
-                                        пупкин</a> </li>
-                                <li class="header__menu-item item-user__id"><a href="" class="header__menu-link">id:
-                                        666</a> </li>
-                                <li class="header__menu-item item-user__exit"><a href="" class="header__menu-link"><img
-                                            src="../images/exiticon.png"></a></li>
+                                <li class="header__menu-item item-user__login">
+                                    <img src="../images/user-icon.svg" class="icon-header" alt="user-icon">
+                                    <a href="" class="header__menu-link">Вася пупкин</a> </li>
+                                <li class="header__menu-item item-user__id">
+                                    <a href="" class="header__menu-link">id: 666</a> 
+                                </li>
+                                <li class="header__menu-item item-user__exit"><a href="" class="header__menu-link exit-text">выйти</a></li>
                             </ul>
                         </div>
                     </div>
@@ -113,14 +121,27 @@
                                 </div>
                                 <div class="list-room__buttons">
                                     <button class="room__button" onclick="watchgame(this.id)" id="spectatorbutton"
-                                        name="spectatorbutton" value="spectatorbutton"> посмотреть
+                                        name="spectatorbutton" value="spectatorbutton">
+                                        <div class="room__button-icon">
+                                            <img src="../images/spectate-icon.svg" class="button-icon"
+                                                alt="spectate-icon">
+                                        </div>
+                                        <div class="room__button-text">
+                                            посмотреть
+                                        </div>
                                     </button>
-                                    <button class="room__button" onclick="show_popap('modal-2',this.id)"
-                                        id="nullidroom" name="nullidroom" value="nullidroom">присоединиться
+                                    <button class="room__button" onclick="show_popap('modal-2',this.id)" id="nullidroom"
+                                        name="nullidroom" value="nullidroom">
+                                        <div class="room__button-icon">
+                                            <img src="../images/joinroom-icon.svg" class="button-icon"
+                                                alt="joinroom-icon">
+                                        </div>
+                                        <div class="room__button-text">
+                                            присоединиться
+                                        </div>
                                     </button>
                                 </div>
                             </li>
-                            
                         </ul>
                     </div>
                 </div>
