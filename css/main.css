@@ -1,25 +1,20 @@
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
 
-  /* width */
-  ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: #141414;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb {
     background: #888;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+::-webkit-scrollbar-thumb:hover {
     background: #555;
-  }
-  
+}
+
 *,
 *:before,
 *:after {
@@ -32,34 +27,32 @@
 
 li {
     list-style-type: none;
-    /* Убираем маркеры */
     text-decoration: none;
-    /* Отменяем подчеркивание у ссылки */
 }
 
 P.top {
     text-align: top;
-    /* Выравнивание по центру */
 }
 
 ul.list li {
     display: inline;
     color: white;
     text-decoration: none;
-    /* Отменяем подчеркивание у ссылки */
     margin-left: 0;
-    /* Отступ слева в браузере IE и Opera */
     padding-left: 0;
-    /* Отступ слева в браузере Firefox, Safari, Chrome */
 }
 
 body {
     background: #19181A;
     font-family: Calibri;
+    overflow: auto;
+}
+
+body._lock {
+    overflow: hidden;
 }
 
 .header {
-    position: relative;
     z-index: 50;
     left: 0;
     top: 0;
@@ -74,7 +67,7 @@ body {
 }
 
 .wrapper {
-    position: relative;
+
     min-height: 100%;
     overflow: hidden;
     display: flex;
@@ -82,7 +75,6 @@ body {
 }
 
 .container {
-    position: relative;
     display: flex;
     margin: 0 auto;
     max-width: 1640px;
@@ -91,125 +83,8 @@ body {
     box-sizing: content-box;
 }
 
-/**----------заголовок с логотипом ----------*/
-.leftpanel__header {
-    display: flex;
-}
 
-.logo-text {
-    color: #fff;
-    font-size: 39px;
-    font-weight: 300;
-    margin: 0px 0px 0px 27px;
-}
-
-.header__logo {}
-
-.header__menu-left {}
-
-.header__menu {
-    display: flex;
-}
-
-.header__container {
-    padding: 11px 0px 11px 0px;
-}
-
-.header__menu-item {
-    color: #fff;
-    font-size: 20px;
-    font-weight: 700;
-    margin: 16px 0px 0px 22px;
-}
-
-.icon-header {
-    width: 15px;
-    height: 15px;
-}
-
-.header__menu-link {
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.3s;
-}
-
-.header__menu-link:hover {
-    text-decoration: underline;
-    color: inherit;
-}
-
-.exit-text {
-    color: rgb(255, 139, 187);
-}
-
-/**----------заголовок с логотипом (АДАПТАЦИЯ)----------*/
-@media (max-width: 960px) {
-    .header__container{
-        display: flex;
-        justify-content: center;
-        justify-items: center;
-        align-items: center;
-        flex-direction: column;
-    }
-}
-
-
-
-/**----------заголовок с логотипом (АДАПТАЦИЯ)----------*/
-.menu-container {
-    display: flex;
-    width: 100%;
-    overflow-x: scroll;
-    white-space: nowrap;
-    overflow-y: hidden;
-    justify-content: space-between;
-}
-
-.header__menu-item {}
-
-.header__balance-block {}
-
-.balance-block {
-    background: #373737;
-    display: flex;
-    max-height: 24px;
-    flex-direction: row;
-}
-
-.balance-block__currency {
-    background: #565656;
-    width: 18px;
-    height: 37px;
-    color: #fff;
-    text-align: center;
-    font-size: 20px;
-}
-
-.balance-block__text {
-    color: #fff;
-    font-size: 20px;
-    margin: 0px 0px 0px 10px;
-}
-
-.item-user__exit {}
-
-.item-balance {
-    font-weight: 200;
-    border-radius: 5px;
-    background: #333333;
-    padding: 0px 5px;
-}
-
-.menu-right {
-    display: flex;
-}
-
-.balance-block {
-    display: flex;
-}
-
-/**----------заголовок с логотипом ----------*/
-/* *----------окно с информацией об игроке ----------*/
+/* *----------окно с информацией об игроке (начало) ----------*/
 /* .user__block {} */
 .user {
     margin: 25px 0px 0px 0px;
@@ -244,10 +119,8 @@ body {
     font-size: 23px;
 }
 
-/* *----------sокно с информацией об игроке ----------*/
-/* *----------баланс ----------*/
-.balance__block {}
-
+/* *----------окно с информацией об игроке (конец)----------*/
+/* *----------баланс (начало)----------*/
 .balance {
     padding: 36px 0px 0px 0px;
 }
@@ -259,8 +132,6 @@ body {
     justify-items: center;
 }
 
-.block-container {}
-
 .balance__text {
     color: #fff;
     font-size: 31px;
@@ -270,8 +141,6 @@ body {
     align-items: center;
     font-weight: 700;
 }
-
-.balance-text {}
 
 .balance__buttons {
     display: flex;
@@ -312,8 +181,8 @@ body {
     color: #00BF4D;
 }
 
-/* *----------баланс ----------*/
-/* *----------основные кнопки ----------*/
+/* *----------баланс (конец)----------*/
+/* *----------основные кнопки (начало)----------*/
 .main-button__background {
     position: relative;
     width: 100%;
@@ -387,15 +256,6 @@ body {
     flex-wrap: wrap;
 }
 
-/* .mainbutton:nth-child(1n) :hover{
-    background: #5302BC;
-}
-.mainbutton:nth-child(2n) :hover{
-    background: #3917AC;
-}
-.mainbutton:nth-child(3n) :hover{
-    background: #1734AC;
-} */
 .icon-btn {
     width: 24px;
     height: 24px;
@@ -404,8 +264,6 @@ body {
 .main-container {
     margin-top: 22px;
 }
-
-.mainbutton__background-icon {}
 
 .mainbutton__background-text {
     font-size: 21px;
@@ -428,17 +286,13 @@ main-button__container {
 }
 
 /* *----------основные кнопки (АДАПТАЦИЯ) ----------*/
-/* *----------основные кнопки ----------*/
-/* *----------последняя ставка ----------*/
-.last-bet {}
-
+/* *----------основные кнопки (конец)----------*/
+/* *----------последняя ставка (начало) ----------*/
 .bet-last {
     border-top: 1px solid #FF0000;
     border-bottom: 1px solid #FF0000;
     margin-top: 22px
 }
-
-.last-bet__container {}
 
 .last-bet__title {
     font-size: 28px;
@@ -459,8 +313,6 @@ main-button__container {
     flex-direction: row;
 }
 
-.last-bet__icon {}
-
 .last-bet__text {
     color: #fff;
     font-size: 24px;
@@ -468,17 +320,11 @@ main-button__container {
     font-weight: lighter;
 }
 
-/* *----------последняя ставка ----------*/
-/* *----------правая панель ----------*/
+/* *----------последняя ставка (конец)----------*/
+/* *----------правая панель (начало)----------*/
 .rightpanel {
     flex: 1 0;
 }
-
-.rightpanel__container {}
-
-.rightpanel-container {}
-
-.rightpanel__header {}
 
 .header-texts {
     display: flex;
@@ -499,12 +345,6 @@ main-button__container {
 .rightpanel-header__text:not(:last-child) {
     margin: 00px 20px 0px 0px;
 }
-
-.rightpanel__body {}
-
-.rightpanel-header__search {}
-
-.search {}
 
 .search__button {
     border: none;
@@ -532,26 +372,18 @@ main-button__container {
     padding-left: 10px;
 }
 
-.rightpanel__body {}
-
-.rightpanel-body {}
-
-.rightpanel-body__container {}
-
 .test {
     color: #fff;
 }
 
-/* *----------правая панель ----------*/
+/* *----------правая панель (конец)----------*/
 .adaptive__column-row {
     width: 100%;
     display: flex;
     flex-direction: row;
 }
 
-/* *----------главная информация----------*/
-.main-info {}
-
+/* *----------главная информация (начало)----------*/
 .main-info__background {
     position: relative;
     height: 100%;
@@ -561,8 +393,6 @@ main-button__container {
 .info-background {
     background: #232323;
 }
-
-.main-info__container {}
 
 .info-body {
     display: flex;
@@ -586,6 +416,10 @@ main-button__container {
 
 .main-info__text:not(:last-child) {
     margin-right: 22px;
+}
+
+.info-title {
+    font-weight: 700;
 }
 
 .main-info__search {
@@ -618,15 +452,20 @@ main-button__container {
     }
 
     .main-info__search {
-        padding: 5px;
+        margin: 4px;
+        height: 100%;
+    }
+
+    .main-info__input {
+        height: 100%;
     }
 }
 
-/* *----------главная информация----------*/
+/* *----------главная информация (конец)----------*/
+/* *----------комната список (начало)----------*/
 .list-room__text {
     position: relative;
     padding: 9px;
-    display: flex;
     background: #434343;
     background-color: #434343;
 }
@@ -640,6 +479,47 @@ main-button__container {
     flex-wrap: wrap;
 }
 
+.room__text {
+    position: relative;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .text-column {
+        width: 100%;
+    }
+
+    .list-room__text:not(:last-child) {
+        margin: 2.5px;
+        padding: 5px;
+        text-align: center;
+        flex: 0 1 49%;
+    }
+
+    .list-room__text:last-child {
+        margin: 0;
+        text-align: center;
+        margin: 5px;
+        flex: 0 1 100%;
+    }
+}
+
+@media (max-width: 509px) {
+    .list-room__text:not(:last-child) {
+        margin: 2.5px;
+        padding: 5px;
+        text-align: center;
+        flex: 0 1 100%;
+    }
+
+    .list-room__text:last-child {
+        margin: 0;
+        text-align: center;
+        margin: 5px;
+        flex: 0 1 100%;
+    }
+}
+
 .list-room {
     position: relative;
     display: flex;
@@ -648,8 +528,7 @@ main-button__container {
     height: auto;
     width: 100%;
     border-style: solid;
-    /* Стиль границы */
-    margin-top: 0.5vw;
+    margin-top: 5px;
     background: #343434;
     background-color: #343434;
     border: none;
@@ -657,6 +536,14 @@ main-button__container {
 
 .rooms__list {
     width: 100%;
+    height: 100%;
+}
+
+.column {
+    overflow-y: auto;
+    width: 100%;
+    background: rgb(22, 22, 22);
+    height: 800px;
 }
 
 .room__text {
@@ -671,6 +558,11 @@ main-button__container {
     font-size: 22px;
     display: flex;
     padding: 9px 28px 9px 28px;
+    transition: all 0.1s;
+}
+
+.room__button:hover {
+    background: #00b430;
 }
 
 .room__button:not(:last-child) {
@@ -678,9 +570,17 @@ main-button__container {
 }
 
 .room__button-icon {
-    width: 27px;
+    width: 20px;
     height: 20px;
     margin-right: 10px;
+}
+
+.room__button-icon svg {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .list-room__buttons {
@@ -689,33 +589,182 @@ main-button__container {
 }
 
 .button-icon {
-    width: 27px;
-    height: 27px;
+    width: 20px;
+    height: 20px;
 }
-@media (max-width: 1024px){
-    .list-room__buttons{
+
+#list-room {
+    display: none;
+}
+
+.notfound {
+    color: #fff;
+    width: 100%;
+    display: none;
+    text-align: center;
+    font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+    .list-room__buttons {
         margin-right: 0;
         width: 100%;
         flex-wrap: nowrap;
     }
-    .room__button{
+
+    .room__button {
         width: 50%;
-       
     }
 }
-@media (max-width: 425px){
-    .list-room__buttons{
+
+@media (max-width: 425px) {
+    .list-room__buttons {
         width: 100%;
         display: block;
         flex-wrap: wrap;
     }
-    .room__button{
+
+    .room__button {
         width: 100%;
         margin-right: 0px;
     }
-    .room__button:last-child{
+
+    .room__button:last-child {
         width: 100%;
         margin-right: 0px;
     }
-    
 }
+
+/* *----------комната список (конец)----------*/
+/* *----------диалог (начало)----------*/
+.overlay {
+    position: fixed;
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* затемнение фона */
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.overlay .flex-popap {
+    height: 100%;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay .flex-popap .popap {
+    position: relative;
+    background-color: #373639;
+    /* цвет фона всплывающего блока */
+    padding: 35px 25px;
+    padding: auto;
+    margin: auto;
+    overflow: auto;
+}
+
+.popap span {
+    position: absolute;
+    background: #743649;
+    right: 0;
+    width: 1.3vw;
+    height: 100%;
+    text-align: center;
+}
+
+.close_popap {
+    color: #fff;
+    text-align: center;
+    font-family: Calibri;
+}
+
+.head_popup {
+    color: #fff;
+    background: #535353;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: left;
+    font-size: 1.3vw;
+    font-style: bold;
+    width: 100%;
+    font-family: Calibri;
+}
+
+.history-icon {
+    height: 20px;
+}
+
+.history__item-text {
+    display: flex;
+}
+
+.history__column {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    overflow-y: scroll;
+}
+
+.history__item {
+    border: 0.1vw;
+    border-color: #707070;
+    background: #202020;
+    border-style: solid;
+    height: auto;
+    position: relative;
+    width: 100%;
+    display: none;
+    padding: 5px;
+    justify-content: space-between;
+    margin-top: 0.5vw;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .history__item {
+        flex-direction: column;
+    }
+}
+
+.font__history {
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.history-info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.history-info__text {
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+}
+
+
+.popap {
+    color: #fff;
+    font-size: 20px;
+}
+
+.history {
+    display: none;
+}
+
+/* *----------диалог (конец)----------*/

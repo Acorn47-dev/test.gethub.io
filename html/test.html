@@ -5,22 +5,136 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-    </style>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/test.css">
 </head>
 <body>
-
-    
-<script>
-
-var myCanvas = document.createElement('canvas');
-document.body.appendChild(myCanvas);
-function f(){
-
-}
-
-
-</script>
+    <div class="wrapper">
+        <section class="hero">
+            <div class="container hero-container">
+                <img src="/images/logo-icon.svg"  class="hero-icon" alt="logo-icon">
+                <div class="hero-title">CheapWin&nbsp;&mdash; играй без вложений.</div>
+                <div class="hero-subtitle">Все что нужно
+                    &nbsp;&mdash; это ваше подключение к&nbsp;интернету!</div>
+                <div class="hero-buttons">
+                    <button class="hero-btn signin">войти</button>
+                    <button class="hero-btn reg">зарегистрироваться</button>
+                </div>
+            </div>
+        </section>
+        <main class="main">
+            <section class="progress">
+                <div class="progress-title title">Почему Вам стоит выбрать нас?</div>
+                <ul class="progress-list">
+                    <li class="progress-item">
+                        <img src="/images/check-icon.svg" alt="check-icon" class="progress-item__icon">
+                        <div class="progress-item__title">Можно играть без вложений</div>
+                    </li>
+                    <li class="progress-item">
+                        <img src="/images/check-icon.svg" alt="check-icon" class="progress-item__icon">
+                        <div class="progress-item__title">Низкие комиссии</div>
+                    </li>
+                    <li class="progress-item">
+                        <img src="/images/check-icon.svg" alt="check-icon" class="progress-item__icon">
+                        <div class="progress-item__title">Куча интересных мини-игр</div>
+                    </li>
+                </ul>
+            </section>
+            <section class="about">
+                <div class="container">
+                    <div class="about-body">
+                        <div class="about-title title">Немного о проекте</div>
+                        <div class="about-descr descr">Проект CheapWin создан специально для тех, кто ищет способ заработать в интернете без вложений.
+                            Смотря простую рекламу и выполняя простые задание получайте реальные деньги. Вы можете сыграть
+                            в различные мини-игры и удвоить свой баланс. Проект поддерживается благодаря коммисиям,
+                            которые взимается после каждой игры и каждого вывода и пополнения баланса!</div>
+                    </div>
+                </div>
+            </section>
+            <section class="wallets">
+                <div class="container">
+                    <div class="wallets-body">
+                        <div class="wallets-title title">Какие кошельки мы поддерживаем?</div>
+                        <div class="wallets-images">
+                            <img src="/images/mwindow-qiwi.svg" class="wallets-images__icon" alt="wallets-images__icon">
+                            <img src="/images/mwindow-visa.svg" class="wallets-images__icon" alt="wallets-images__icon">
+                            <img src="/images/mwindow-bitcoin.svg" class="wallets-images__icon" alt="wallets-images__icon">
+                            <img src="/images/mwindow-ethereum.svg" class="wallets-images__icon" alt="wallets-images__icon">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="links">
+                <div class="container">
+                    <div class="links-body">
+                        <div class="wallets-title title">Ссылки, которые будут вам полезны:</div>
+                        <ul class="links-list">
+                            <li class="links-item">
+                                <a href="#" class="link">Часто задаваемые вопросы</a>
+                            </li>
+                            <li class="links-item">
+                                <a href="#" class="link">Наш телеграмм канал</a>
+                            </li>
+                            <li class="links-item">
+                                <a href="#" class="link">Политика конфиденциальности</a>
+                            </li>
+                            <li class="links-item">
+                                <a href="#" class="link">Пользовательское соглашение</a>
+                            </li>
+                            <li class="links-item">
+                                <a href="#" class="link">Доказуемая честность</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="bottom-btns">
+                <button class="bottom-btn signin">войти</button>
+                <button class="bottom-btn reg">зарегистрироваться</button>
+            </section>
+        </main>
+    </div>
+    <footer class="footer footer-down">
+        <div class="footer-top footer-top">
+            <div class="container">
+                <div class="footer__body">
+                    <div class="footer-col">
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <div class="footer__title">Основная информация</div>
+                                <div><a href="/html/policyprivacy.html" class="footer__link">Пользовательское соглашение</a></div>
+                                <div><a href="/html/policyprivacy.html" class="footer__link">Политика конфиденциальности</a></div>
+                                <div><a href="/html/policyprivacy.html" class="footer__link">Доказуемая честность</a></div>
+                            </li>
+                            <li class="footer__item">
+                                <div class="footer__title">Другое</div>
+                                <div><a href="/html/FAQ.html" class="footer__link">FAQ</a></div>
+                                <div><a href="/html/telegram.html" class="footer__link">Наш Telegram</a></div>
+                                <div><a href="#" class="footer__link">Наши контактные данные</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <div class="footer__title">Возникли проблемы?</div>
+                        <button class="footer__btn">Техническая поддержка</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom footer-bottom">
+            <div class="container">
+                <div class="footer__body">
+                    <div class="footer-col-bottom">
+                        <img src="../images/logo-icon.svg" alt="logo" class="footer__logo">
+                        <div class="footer__logo-text">CheapWin</div>
+                    </div>
+                    <div class="footer-col-bottom">
+                        <small class="copyright">Все права защищены</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
-<button onclick="f()"></button>
 </html>

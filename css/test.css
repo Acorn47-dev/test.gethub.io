@@ -1,0 +1,265 @@
+/* *-----основные настройки-----(начало) */
+.title {
+    font-size: var(--font-size);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 33px;
+}
+.descr{
+    font-size: var(--font-size);
+    font-weight: 300;
+    color: #fff;
+}
+:root{
+    --font-size: 36px;
+}
+/* *-----основные настройки-----(конец) */
+
+/* *-----главная секция-----(конец) */
+.hero-title{
+    color:#fff;
+    font-weight: 700;
+    font-size: 104px;
+    max-width: 848px;
+    width: 100%;
+}
+.hero{
+    background-image: url(../images/main-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    margin-bottom: 23px;
+}
+.hero-container{
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+}
+.hero-icon{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 50px;
+}
+.hero-subtitle{
+    color:#fff;
+    font-weight: 300;
+    font-size: 62px;
+    max-width: 552px;
+    width: 100%;
+    margin-bottom: 57px;
+}
+.hero-buttons{
+    display: flex;
+    flex-direction: row;
+}
+.hero-btn{
+    font-size: var(--font-size);
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    border-radius: 30px;
+    padding: 10px 70px;
+}
+.hero-btn:not(:last-child){
+    margin-right: 21px;
+}
+.signin:hover{
+    background: #08749e;
+}
+.signin{
+    background: #0B99CF;
+    transition: all 0.1s ease-out;
+}
+.reg{
+    background: #0BCF38;
+    transition: all 0.1s ease-out;
+}
+.reg:hover{
+    background: #079e2a;
+}
+/* *-----главная секция-----(конец) */
+
+/* *-----почему вам стоит выбрать нас? (начало) */
+.progress {
+    width: max-content;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 76px;
+}
+
+.progress-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.progress-item {
+    display: flex;
+}
+.progress-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+.progress-item__icon {
+    margin-right: 31px;
+    
+}
+.progress-item__title {
+    font-size: var(--font-size);
+    font-weight: 700;
+    color: #fff;
+
+}
+/* *-----почему вам стоит выбрать нас? (конец) */
+
+/* *-----немного о проекте (начало) */
+.about-body{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.about{
+    margin-bottom: 57px;
+}
+/* *-----немного о проекте (конец) */
+
+
+/* *----кошельки (начало) */
+.wallets-body{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+.wallets-images__icon:not(:last-child){
+    margin-right: 90px;
+    height: 50px;
+}
+.wallets-images__icon{
+    height: 50px;
+}
+.wallets-images{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.wallets{
+    margin-bottom: 110px;
+}
+/* *----кошельки (конец) */
+
+/* *----ссылки (начало) */
+.links-body {
+    margin: 0 auto;
+    text-align: center;
+}
+.links-list {
+    display: flex;
+    flex-direction: column;
+}
+.links-item {
+}
+.link {
+    color: #fff;
+    font-size: var(--font-size);
+}
+.links{
+    margin-bottom: 50px;
+}
+/* *----кошельки (конец) */
+
+.bottom-btns{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.bottom-btn{
+    width: 100%;
+    max-width: 460px;
+    font-size: var(--font-size);
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    padding: 10px 0;
+    border-radius: 30px;
+}
+.bottom-btn:not(:last-child){
+    margin-right: 20px;
+}
+
+/* *----АДАПТАЦИЯ СТРАНИЦЫ (начало) */
+@media(max-width: 768px){
+    .hero-buttons{
+        flex-direction: column;
+    }
+
+    .hero-btn:not(:last-child){
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .hero-btn{
+        margin: 0;
+        margin-bottom: 10px;
+        padding: 10px 0;
+    }
+    .hero-title{
+        font-size: 50px;
+    }
+    .hero-subtitle{
+        font-size: 40px;
+    }
+    .title{
+        font-size: 20px;
+    }
+    .hero-btn{
+        font-size: 20px;
+    }
+    .progress-item__title{
+        font-size: 20px;
+    }
+    .progress-item__icon{
+        height: 20px;
+    }
+    .about-descr{
+        font-size: 16px;
+    }
+    .wallets-images__icon{
+        flex: 0 1 50%;
+        margin: 0;
+        margin-top: 10px;
+    }
+    .wallets-images__icon:not(:last-child){
+        flex: 0 1 50%;
+        margin: 0;
+        margin-top: 10px;
+    }
+    .bottom-btns{
+        flex-direction: column;
+    }
+    .bottom-btn{
+        max-width:none;
+        width: 100%;
+       font-size: 20px;
+    }
+    .bottom-btn:not(:last-child){
+       margin: 0;
+       margin-bottom: 10px;
+     }
+     .link{
+         font-size: 16px;
+      }
+}
+@media(max-width:425px){
+    .wallets-images__icon{
+        flex: 0 1 100%;
+        margin: 0;
+        margin-top: 10px;
+    }
+    .wallets-images__icon:not(:last-child){
+        flex: 0 1 100%;
+        margin: 0;
+        margin-top: 10px;
+    }
+}
+/* *----АДАПТАЦИЯ СТРАНИЦЫ (конец) */

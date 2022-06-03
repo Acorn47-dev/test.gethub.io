@@ -85,18 +85,7 @@
           position: relative;
           left: 0;
         }
-        .usersbackground {
-    background: #313033;
-     background-color: #313033;
-    display: table-column;
-          width: 25%;
-          height: 100%;
-          position: absolute;
-          top: 0;
-    right: 0;
-  
-  
-        }
+
   
         .addsbackground {
     background: #222843;
@@ -556,12 +545,7 @@
     font-family: Calibri;
   }
   
-  .betfontleft {
-    color: #F0F8FF;
-    font-size: 1.1vw;
-    float: left;
-    font-family: Calibri;
-  }
+
   
   .betfontcenter {
     color: #F0F8FF;
@@ -574,6 +558,12 @@
     color: #F0F8FF;
     float: right;
     font-size: 1.1vw;
+    font-family: Calibri;
+  }
+  .betfontleft {
+    color: #F0F8FF;
+    font-size: 1.1vw;
+    float: left;
     font-family: Calibri;
   }
   
@@ -859,10 +849,7 @@
     color: #fff;
   }
   
-  .box {
-    display: inline-table;
-    vertical-align: middle;
-  }
+
   
   .minibutton {
     background: #0061AC;
@@ -1016,74 +1003,7 @@
     margin-top: 0.5vw;
   }
   
-  .overlay {
-    position: fixed;
-    z-index: 5;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    padding: 0;
-    margin: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    /* затемнение фона */
-    display: none;
-  }
   
-  .overlay.active {
-    display: block;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .overlay .flex-popap {
-    height: 100%;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .overlay .flex-popap .popap {
-    position: relative;
-    background-color: #373639;
-    /* цвет фона всплывающего блока */
-    padding: 35px 25px;
-    padding: auto;
-    margin: auto;
-    overflow: auto;
-  }
-  
-  .popap span {
-    position: absolute;
-    background: #743649;
-    right: 0;
-    width: 1.3vw;
-    height: 100%;
-    text-align: center;
-  
-  }
-  
-  .close_popap {
-    color: #fff;
-    text-align: center;
-    font-family: Calibri;
-  
-  }
-  
-  .head_popup {
-    color: #fff;
-    background: #535353;
-    position: absolute;
-    left: 0;
-    top: 0;
-    text-align: left;
-    font-size: 1.3vw;
-    font-style: bold;
-    width: 100%;
-    font-family: Calibri;
-  }
   
   .historyparent {
     border: 0.1vw;
@@ -1317,3 +1237,108 @@
       float: right; /*Задаем обтекание*/
   display: flex;
   }
+
+  body{
+    background-color:#19181A;
+    margin: 0;
+padding: 0;
+}
+.uppanel{
+
+  position: relative;
+  left: 0%;
+  top: 0%;
+  float: top;
+  background: #3F3D41;
+ margin: 0;
+  width: 75%;
+  height: 2.8vw;
+}
+.toptext{
+font-family: Calibri;
+font-size: 1.1vw;
+color: #fff;
+margin-right: 0.5vw;
+
+
+}
+
+.uppanelitem{
+position: absolute;
+float: left;
+display: flex;
+align-items: center;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+#usercontainer1{
+
+width: 100%;
+height: 40vw;
+overflow: hidden;
+}
+
+#usercontainer2{
+display: flex;
+flex-direction: column;
+width: 100%;
+height: 95%;
+overflow-y: scroll;
+padding-right: 20px;
+}
+#userborder{
+display: none;
+justify-self: center;
+align-self: center;
+}
+#parentclon{
+display: none;
+}
+.userbordermain {
+      width: auto;
+      height: auto;
+      padding: 1vw;
+      margin-top: 0.5vw;
+      display: none;
+border-style: solid;
+border-color: #324AB2;
+    border-radius: 5px;
+  }
+
+
+
+
+.logoroom{
+margin: 0.2vw;
+height: 2.1vw;
+width: 2.1vw;
+}
+
+.backgrounduser
+{
+height: auto;
+position: relative;
+width: 100%;
+border-style: solid; /* Стиль границы */
+margin-top: 0.5vw;
+background: #3F3D40;
+background-color: #3F3D40;
+border: none;
+}
+.borderuser
+{ 
+position: relative;
+height: auto;
+padding: 0.5vw;
+vertical-align: middle;
+margin-right: 0.5vw;
+display: inline-table ;
+background: #59585A;
+background-color: #59585A;
+border: none;
+width:max-content;
+}
+
+#margin{
+margin-top: 15%;
+}

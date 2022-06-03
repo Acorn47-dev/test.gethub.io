@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/general.css">
+        <link rel="stylesheet" href="/css/FAQ.css">
+        <style>
+            * {
+                text-decoration: none;
+                list-style: none;
+            }
+
+.telegram {
+    width: 100%;
+    display: flex;
+    overflow:hidden;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+.telegram__title {
+    color:#fff;
+}
+.telegram__sub-title {
+    color:#fff;
+}
+.telegram-list {
+    width: 100%;
+    max-width: 447px;
+}
+.telegram-list__item {
+    width: 100%;
+}
+.telegram-item {
+    margin-bottom: 5px;
+}
+.telegram-item__body {
+    background: #404040;
+    width: 100%;
+    max-width: 447px;
+    height: 46px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+.telegram-item__number {
+    color:#fff;
+    font-size: 32px;
+    background: #262626;
+    text-align: center;
+    height: 46px;
+    width: 41px;
+}
+.telegram-item__text {
+    color:#fff;
+    font-size: 26px;
+    text-align: center;
+    width: 100%;
+}
+.telegram-item:last-child{
+    margin-bottom: 10px;
+}
+.exit-header{
+    margin-bottom: 200px;
+}
+.telegram{
+    margin-bottom: 300px;
+}
+.telegram-btn {
+    background: #318BD9;
+    border-radius: 16px;
+    max-width: 361px;
+    width: 100%;
+    height: 62px;
+    display: flex;
+    font-size: 31px;
+    font-weight: 700;
+    color:#fff;
+
+    align-items: center;
+}
+.telegram-btn__icon {
+    margin-left: 10px;
+    height: 30px;
+}
+.telegram-btn__text {
+    width: 100%;
+    text-align: center;
+}
+        </style>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header class="exit-header">
+                <div class="container">
+                    <a class="gomain" href="/index.php">
+                        <img src="/images/gomain-icon.svg" alt="gomain-icon" class="gomain__image">
+                        <div class="gomain__text">На главную</div>
+                    </a>
+                </div>
+            </header>
+            <main class="main">
+                <section class="telegram">
+                    <h2 class="telegram__title">Наш телеграм</h2>
+                    <h3 class="telegram__sub-title">Почему вам стоит подписаться?</h3>
+                    <ul class="telegram-list">
+                        <li class="telegram-list__item telegram-item">
+                            <div class="telegram-item__body">
+                                <div class="telegram-item__number">1</div>
+                                <div class="telegram-item__text">новости о проекте</div>
+                            </div>
+                        </li>
+                        <li class="telegram-list__item telegram-item">
+                            <div class="telegram-item__body">
+                                <div class="telegram-item__number">2</div>
+                                <div class="telegram-item__text">новости о проекте</div>
+                            </div>
+                        </li>
+                        <li class="telegram-list__item telegram-item">
+                            <div class="telegram-item__body">
+                                <div class="telegram-item__number">3</div>
+                                <div class="telegram-item__text">новости о проекте</div>
+                            </div>
+                        </li>
+                        <li class="telegram-list__item telegram-item">
+                            <div class="telegram-item__body">
+                                <div class="telegram-item__number">4</div>
+                                <div class="telegram-item__text">новости о проекте</div>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#" class="telegram-btn">
+                        <img src="/images/telegram-icon.svg" class="telegram-btn__icon" alt="">
+                        <div class="telegram-btn__text">присоединиться</div>
+                    </a>
+                </section>
+            </main>
+            <footer class="footer footer-down">
+                <div class="footer-top footer-top">
+                    <div class="container">
+                        <div class="footer__body">
+                            <div class="footer-col">
+                                <ul class="footer__list">
+                                    <li class="footer__item">
+                                        <div class="footer__title">Основная информация</div>
+                                        <div><a href="/html/policyprivacy.html" class="footer__link">Пользовательское соглашение</a></div>
+                                        <div><a href="/html/policyprivacy.html" class="footer__link">Политика конфиденциальности</a></div>
+                                        <div><a href="/html/policyprivacy.html" class="footer__link">Доказуемая честность</a></div>
+                                    </li>
+                                    <li class="footer__item">
+                                        <div class="footer__title">Другое</div>
+                                        <div><a href="/html/FAQ.html" class="footer__link">FAQ</a></div>
+                                        <div><a href="/html/telegram.html" class="footer__link">Наш Telegram</a></div>
+                                        <div><a href="#" class="footer__link">Наши контактные данные</a></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-col">
+                                <div class="footer__title">Возникли проблемы?</div>
+                                <button class="footer__btn">Техническая поддержка</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom footer-bottom">
+                    <div class="container">
+                        <div class="footer__body">
+                            <div class="footer-col-bottom">
+                                <img src="../images/logo-icon.svg" alt="logo" class="footer__logo">
+                                <div class="footer__logo-text">CheapWin</div>
+                            </div>
+                            <div class="footer-col-bottom">
+                                <small class="copyright">Все права защищены</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+
+</html>

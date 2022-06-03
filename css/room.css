@@ -1,0 +1,162 @@
+.room-content {
+    width: 1226px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    background: #2E2E2E;
+}
+
+.room-content__body {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-info__texts{
+    display: flex;
+}
+
+.users-content {
+    width: 414px;
+    background: #2A2A2A;
+}
+
+.room__title {
+    font-size: 42px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.room__descr {
+    font-size: 27px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.main__body {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 840px;
+}
+
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.column-user__item {
+    margin: 5px 0px;
+    display: flex;
+    background: #3F3D40;
+}
+
+.user__item {
+    margin: 2px;
+    padding: 5px;
+    flex: 0 1 50%;
+    font-size: 20px;
+    white-space: nowrap;
+    background: #59585A;
+    color: #fff;
+}
+
+.content__title {
+    padding: 5px 0px;
+    font-size: 25px;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.column {
+    overflow-y: scroll;
+    height: 100%;
+}
+
+@media (max-width: 1649px) {
+    .users-content {
+        width: 100%;
+    }
+    .room-content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    .room__title{
+        font-size: 25px;
+    }
+    .room__descr{
+        font-size: 20px;
+    }
+}
+
+.result{
+    display:inline-block;
+    position:relative;
+z-index: 10px;
+left:50%;
+width: 0;
+transform: translateX(-50%);
+border: 10px solid transparent;
+border-top: 20px solid #425DD8;
+
+  }
+  .box{
+    margin-top:20px;
+    left:0;
+    flex-direction: column;
+    display: flex;
+    border: 1px solid #404A78;
+overflow: hidden;
+height: 150px;
+    position:relative;
+  }
+  .roulete {
+    position:relative;
+width: 100%;
+left: 100%;
+display:flex;
+height: auto;
+}
+
+
+
+.item {
+position: relative;
+left: 0;
+width: auto;
+border: 1px solid palegoldenrod;
+font-family: Calibri;
+color: #fff;
+float: left;
+text-align: center;
+line-height: auto;
+}
+
+.room__exit-btn{
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    background: #EE687A;
+    color:#fff;
+}
+
+.user-item{
+    display: none;
+}
+.room__winner-user{
+    color:#fff;
+    font-size: 20px;
+}

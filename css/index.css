@@ -35,50 +35,36 @@
    /* Отменяем подчеркивание у ссылки */
  }
 
- P.top {
-   text-align: top;
-   /* Выравнивание по центру */
- }
-
- ul.list li {
-   display: inline;
-   color: white;
-   text-decoration: none;
-   /* Отменяем подчеркивание у ссылки */
-   margin-left: 0;
-   /* Отступ слева в браузере IE и Opera */
-   padding-left: 0;
-   /* Отступ слева в браузере Firefox, Safari, Chrome */
- }
 
  /* * ----------общие стили---------- */
- .captchaboxtext {
-   color: #fff;
- }
+
 
  .input-form {
-   background-color: #16151D;
+   background-color: #2A2A2A;
    width: 360px;
    height: 60px;
    margin-top: 15px;
    outline: none;
-   border: 1px solid #787FF8;
+   border: none;
+   border-radius: 9px;
    padding-left: 14px;
    font-size: 18px;
-   color: #abb0ff;
+   color: #5a5a5a;
    outline: none;
    transition: background-color 0.3s, transform 0.3s;
  }
+
  .input-form:hover {
-  color: #d0d3ff;
-  border-color: #a8acff;
-  background-color: #242647;
-}
-::placeholder {
-  color: #787FF8;
-  font-size: 18px;
-  font-weight: 200;
-}
+   color: #d0d3ff;
+   border-color: #a8acff;
+   background-color: #242647;
+ }
+
+ ::placeholder {
+   color: #676767;
+   font-size: 18px;
+   font-weight: 200;
+ }
 
  .switch-btn {
    font-size: 18px;
@@ -86,8 +72,8 @@
    height: 60px;
    color: #fff;
    border: none;
-   background: #444888;
-   background-color: #444888;
+   background: #363636;
+   background-color: #363636;
  }
 
  .nametitle {
@@ -103,21 +89,19 @@
  }
 
  .reg-form {
-   background-color: #7E86FF;
    font-size: 20px;
    font-weight: 100;
    width: 360px;
    height: 60px;
    text-align: center;
-   background: #7E86FF;
+   background: #4B4B4B;
    transition: background-color 0.3s, transform 0.3s;
    color: #fff;
    border: none;
  }
 
  .reg-form:hover {
-   background-color: #6b73da;
-   background: #6b73da;
+   background: #383838;
  }
 
  @media(max-width: 375px) {
@@ -139,13 +123,6 @@
 
 
 
- .captchabutton {
-   background: #787FF8;
-   border: none;
-   color: #fff;
-   font-size: 1vw;
- }
-
 
  @font-face {
    font-family: captchacode;
@@ -162,20 +139,13 @@
    padding: 0px 0px 10px 0px;
  }
 
- .logo {
-   width: 15vw;
-   height: 7vw;
- }
 
  .switch-btn.active {
-   background: #7E86FF;
-   background-color: #7E86FF;
+   background: #686868;
+   background-color: #686868;
  }
 
- .logo {
-   width: 4.4vw;
-   height: 4vw;
- }
+
 
  .betroomdiscriptiontext {
    font-size: 20px;
@@ -202,9 +172,6 @@
    align-items: center;
  }
 
- .new {
-   padding: 50px;
- }
 
  .form-group {
    display: block;
@@ -232,7 +199,7 @@
    content: '';
    -webkit-appearance: none;
    background-color: transparent;
-   border: 1px solid #7E86FF;
+   border: 1px solid #4B4B4B;
    color: #fff;
    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
    padding: 10px;
@@ -252,67 +219,11 @@
    width: 6px;
    color: #fff;
    height: 14px;
-   border: solid #7E86FF;
+   border: solid #4B4B4B;
    border-width: 0 2px 2px 0;
    transform: rotate(45deg);
  }
 
- .shadow {
-   border-radius: 10px;
-   border-radius: 10px;
-   /* Радиус скругления */
-   background: #FFFFFF;
-   /* Цвет фона */
- }
-
- .shadow {
-   border-radius: 10px;
-   border-radius: 10px;
-   /* Радиус скругления */
-   background: #FFFFFF;
-   /* Цвет фона */
- }
-
- .c-button {
-   background-color: #af2626;
-   border-radius: 5px;
-   width: 220px;
-   height: auto;
-   background: #fefcea;
-   /* Для старых браузров */
-   background: linear-gradient(to left, #9338FB, #E160F9);
-   transition: background-color 0.3s, transform 0.3s;
-   padding: 10px;
-   border: none;
- }
-
- .boldtext {
-   font-weight: 3;
-   font-size: 70px;
-   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
- }
-
- .namefont {
-   src: url(fonts/tahoma.ttf);
-   font-size: 40px;
-   font-weight: 900;
- }
-
- .playerroomfont {
-   src: url(fonts/tahoma.ttf);
-   font-size: 2vw;
-   color: #F0F8FF;
-   font-weight: 900;
- }
-
- .buttontext {
-   font-family: Calibri;
-   font-size: 1.2vw;
-   text-align: center;
-   position: absolute;
-   transform: translate(-50%, -50%);
-   color: white;
- }
 
  /* * ----------диалог---------- */
  .dialog {
